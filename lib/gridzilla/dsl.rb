@@ -56,8 +56,8 @@ module Gridzilla
         data       = options[:data] || {}
 
         unless @gridzilla_script_loaded
-          concat(content_tag(:script, <<-SCRIPT))
-            if (!gridzilla) {
+          main_script =  <<-SCRIPT
+            if (!gridzilla) { '';
               var gridzilla = {};
 
               (function(){
@@ -363,7 +363,7 @@ module Gridzilla
               })();
             }
           SCRIPT
-
+          concat(content_tag(:script,main_script.html_safe,nil,false))
           @gridzilla_script_loaded = true
         end
 
@@ -419,7 +419,7 @@ module Gridzilla
             SCRIPT
           end
 
-          if RAILS_ENV == 'development'
+          if Rails.env.development?
             concat(content_tag(:div, content_tag(:a, 'reload grid', :href => '#', :onclick => "gridzilla.load('#{name}')", :class => 'reload_link'), :id => "#{name}_reloader"))
           end
         end
@@ -491,7 +491,7 @@ module Gridzilla
 
         @view.concat(@view.tag(:div, options, true))
         view_dsl.instance_eval(&block)
-        @view.concat("<div class='clear'></div></div>")
+        @view.concat("<div class='clear'></div></div>".html_safe)
       end
 
       def rows(*args, &block)
@@ -516,20 +516,20 @@ module Gridzilla
           @view.concat("All #{@gridzilla.last[:collection].total_entries} items are selected. ")
           @view.concat("<span class='link gz_multi_clear'>Clear Selection.</span></span></div>")
         end
-        @view.concat("<div class='#{Gridzilla::Css::TableContainer}'>")
-        @view.concat("<table class='#{Gridzilla::Css::Table}'>")
-        @view.concat("<thead>")
-        @view.concat("<tr>")
+        @view.concat("<div class='#{Gridzilla::Css::TableContainer}'>".html_safe)
+        @view.concat("<table class='#{Gridzilla::Css::Table}'>".html_safe)
+        @view.concat("<thead>".html_safe)
+        @view.concat("<tr>".html_safe)
         @gridzilla.last[:row_data] = nil
         if block.arity == 1
           view_dsl.instance_exec(Gridzilla::Gobbler.new, &block)
         else
           view_dsl.instance_exec(Gridzilla::Gobbler.new, @gridzilla.last[:collection], &block)
         end
-        @view.concat("</tr>")
-        @view.concat("</thead>")
+        @view.concat("</tr>".html_safe)
+        @view.concat("</thead>".html_safe)
 
-        @view.concat("<tbody>")
+        @view.concat("<tbody>".html_safe)
 
         row_css_class_option  = options[:class]
         row_css_id_option     = options[:id]
@@ -548,18 +548,18 @@ module Gridzilla
           end
           options[:id]    = row_css_id
           options[:class] = options[:class].to_s + @view.cycle(" alt", "")
-          @view.concat(@view.tag(:tr, options, true))
+          @view.concat(@view.tag(:tr, options, true).html_safe)
           @gridzilla.last[:row_data] = item
           if block.arity == 1
             view_dsl.instance_exec(item, &block)
           else
             view_dsl.instance_exec(item, @gridzilla.last[:collection], &block)
           end
-          @view.concat("</tr>")
+          @view.concat("</tr>".html_safe)
         end
-        @view.concat("</tbody>")
-        @view.concat("</table>")
-        @view.concat("</div>")
+        @view.concat("</tbody>".html_safe)
+        @view.concat("</table>".html_safe)
+        @view.concat("</div>".html_safe)
         if @gridzilla.last[:collection].empty? and @gridzilla.last[:empty_block]
           empty_options         = @gridzilla.last[:empty_block_options] || {}
           empty_options[:class] = "#{Gridzilla::Css::Empty} #{empty_options[:class]}".strip
@@ -629,9 +629,9 @@ module Gridzilla
           @view.concat(@view.tag(:th))
           @gridzilla.last[:single_select] = true
         elsif attribute.is_a?(Symbol)
-          @view.concat(@view.content_tag(:td, @view.tag(:input, :type => "hidden", :name => "#{@gridzilla.last[:grid_name]}_select", :value => @gridzilla.last[:row_data].send(attribute).to_json, :id => nil)+@view.tag(:div, :class => Gridzilla::Css::RadioButton), options))
+          @view.concat(@view.content_tag(:td, @view.tag(:input, :type => "hidden", :name => "#{@gridzilla.last[:grid_name]}_select", :value => @gridzilla.last[:row_data].send(attribute).to_json, :id => nil)+@view.tag(:div, :class => Gridzilla::Css::RadioButton), options,false))
         else
-          @view.concat(@view.content_tag(:td, @view.tag(:input, :type => "hidden", :name => "#{@gridzilla.last[:grid_name]}_select", :value => attribute.to_json, :id => nil)+@view.tag(:div, :class => Gridzilla::Css::RadioButton), options))
+          @view.concat(@view.content_tag(:td, @view.tag(:input, :type => "hidden", :name => "#{@gridzilla.last[:grid_name]}_select", :value => attribute.to_json, :id => nil)+@view.tag(:div, :class => Gridzilla::Css::RadioButton), options,false))
         end
       end
 
@@ -672,7 +672,7 @@ module Gridzilla
           header_content = name
           if sort_key
             options[:class] = "#{Gridzilla::Css::Sortable} #{options[:class]}".strip
-            header_content << @view.hidden_field_tag("sort_key", sort_key)
+            header_content << @view.hidden_field_tag("sort_key", sort_key).html_safe
 
             if @view.params[:sort_key] == sort_key
               if @view.params[:sort_order] == "DESC"

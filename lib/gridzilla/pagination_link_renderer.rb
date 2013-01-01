@@ -1,5 +1,6 @@
+require 'will_paginate/view_helpers/link_renderer'
 module Gridzilla
-  class PaginationLinkRenderer < WillPaginate::LinkRenderer
+  class PaginationLinkRenderer < WillPaginate::ViewHelpers::LinkRenderer
     protected
 
     def page_link(page, text, attributes = {})
