@@ -251,7 +251,7 @@ module Gridzilla
                            opacity: .7,
                            color: '#fff'
                          },
-                    message: '<div class="gz_load"><img src="/images/gridzilla/red_blk_loader.gif"/><h2>' + message + '</h2></div>'
+                    message: '<div class="gz_load"><img src="/assets/gridzilla/red_blk_loader.gif"/><h2>' + message + '</h2></div>'
                   });
                 }
 
@@ -566,7 +566,7 @@ module Gridzilla
 
           @view.concat(@view.tag(:div, empty_options, true))
           @view.instance_eval &@gridzilla.last[:empty_block]
-          @view.concat("</div>")
+          @view.concat("</div>".html_safe)
         end
       end
     end
@@ -652,11 +652,11 @@ module Gridzilla
         options = args.extract_options!
 
         if @gridzilla.last[:row_data].nil?
-          @view.concat(@view.content_tag(:th, "&nbsp;", options))
+          @view.concat(@view.content_tag(:th, "&nbsp;", options,false))
         else
           @view.concat(@view.tag(:td, options, true))
           @view.concat("#{@gridzilla.last[:row_number] += 1}")
-          @view.concat("</td>")
+          @view.concat("</td>".html_safe)
         end
       end
 
@@ -682,7 +682,7 @@ module Gridzilla
               end
             end
           end
-          @view.concat(@view.content_tag(:th, header_content, options))
+          @view.concat(@view.content_tag(:th, header_content, options, false))
         else
           @view.concat(@view.tag(:td, options, true))
           if block_given?
@@ -690,7 +690,7 @@ module Gridzilla
           else
             @view.concat(@gridzilla.last[:row_data].send(attribute).to_s)
           end
-          @view.concat("</td>")
+          @view.concat("</td>".html_safe)
         end
       end
     end
