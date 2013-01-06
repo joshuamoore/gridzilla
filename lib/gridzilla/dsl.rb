@@ -389,9 +389,9 @@ module Gridzilla
           concat(tag(:div, {:id => name, :class => grid_class}, true))
           view_dsl = Gridzilla::ViewDsl::Base.new(Gridzilla::View::Grid.new(self), self)
           view_dsl.instance_eval(&block)
-          concat('</div>')
+          concat('</div>'.html_safe)
 
-          concat(content_tag(:script, <<-SCRIPT))
+          concat(content_tag(:script, <<-SCRIPT,nil,false))
             setTimeout(function() {
               gridzilla.setup('#{name}');
               gridzilla.set_option('#{name}', 'controller', #{grid_controller.to_json});
@@ -474,7 +474,7 @@ module Gridzilla
         if block_given?
           @view.concat(@view.tag(:div, options, true))
           yield
-          @view.concat("</div>")
+          @view.concat("</div>".html_safe)
         else
           @view.concat(@view.content_tag(:div, @view.content_tag(:h4, text), options))
         end
