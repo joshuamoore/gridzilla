@@ -3,16 +3,29 @@ module Gridzilla
   class PaginationLinkRenderer < WillPaginate::ViewHelpers::LinkRenderer
     protected
 
-    def page_link(page, text, attributes = {})
-      extra_options = @template.instance_eval do
-        options        = HashWithIndifferentAccess.new.merge(request.query_parameters.clone)
+    def page_number(page)
+      if page == current_page
+        tag(:span, page, class: 'current')
+      else
+        grid_name = @template.instance_eval("@gridzilla.last[:grid_name].to_json")
+        options        = HashWithIndifferentAccess.new.merge(@template.request.query_parameters.clone)
         options[:page] = page
-        Gridzilla::PaginationLinkRenderer.to_flat_json(options)
+        extra_options = @template.instance_eval do
+          Gridzilla::PaginationLinkRenderer.to_flat_json(options)
+        end
+
+
+        @template.link_to_function(page, 
+          "gridzilla.set_data(#{grid_name}, $.extend(gridzilla.get_data(#{grid_name}), {page: #{page}})); gridzilla.load(#{grid_name}, {data: {#{extra_options}}})")
       end
+    end
 
-      grid_name = @template.instance_eval("@gridzilla.last[:grid_name].to_json")
-
-      @template.link_to_function text, "gridzilla.set_data(#{grid_name}, $.extend(gridzilla.get_data(#{grid_name}), {page: #{page}})); gridzilla.load(#{grid_name}, {data: {#{extra_options}}})", attributes
+    def previous_or_next_page(page, text, classname)
+      if page
+        tag(:span, text, :class => classname + " disabled")
+      else
+        tag(:span, text, :class => classname + " disabled")
+      end
     end
 
     class << self
