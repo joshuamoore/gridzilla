@@ -22,7 +22,21 @@ module Gridzilla
 
     def previous_or_next_page(page, text, classname)
       if page
-        tag(:span, text, :class => classname + " disabled")
+        page_num = current_page + 1
+        if classname == "previous_page"
+          classname = "prev_page"
+          page_num = current_page - 1
+        end
+
+        grid_name = @template.instance_eval("@gridzilla.last[:grid_name].to_json")
+        options        = HashWithIndifferentAccess.new.merge(@template.request.query_parameters.clone)
+        options[:page] = page
+        extra_options = @template.instance_eval do
+          Gridzilla::PaginationLinkRenderer.to_flat_json(options)
+        end
+
+        @template.link_to_function(text.html_safe,
+          "gridzilla.set_data(#{grid_name}, $.extend(gridzilla.get_data(#{grid_name}), {page: #{page_num}})); gridzilla.load(#{grid_name}, {data: {#{extra_options}}})")
       else
         tag(:span, text, :class => classname + " disabled")
       end
