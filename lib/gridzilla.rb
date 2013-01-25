@@ -3,3 +3,6 @@ require 'gridzilla/delegate'
 require 'gridzilla/gobbler'
 require 'gridzilla/pagination_link_renderer'
 require 'gridzilla/dsl'
+
+
+puts 'i have poop in my pants'
