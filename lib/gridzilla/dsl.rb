@@ -55,11 +55,6 @@ module Gridzilla
         grid_class = options[:class] || "gridzilla"
         data       = options[:data] || {}
 
-        unless @gridzilla_script_loaded
-          raw(concat("<%= <script type='type/text' src='/javascripts/gridzilla.js'></script> %>"))
-          @gridzilla_script_loaded = true
-        end
-
         concat(content_tag(:script, <<-SCRIPT, nil, false))
           gridzilla.set_data('#{name}', #{data.to_json});
           #{"gridzilla.set_option('#{name}', 'height', #{options[:height].to_json});" if options[:height]}
