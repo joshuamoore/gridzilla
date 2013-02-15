@@ -500,7 +500,7 @@ module Gridzilla
         raise ArgumentError, "Missing block in rows definition" unless block_given?
 
         view_dsl                     = Gridzilla::ViewDsl::Base.new(Gridzilla::View::Row.new(@view), @view)
-        @gridzilla.last[:row_number] = if @gridzilla.last[:collection].is_a? WillPaginate::Collection
+        @gridzilla.last[:row_number] = if @gridzilla.last[:collection].respond_to?(:total_pages)
                                          @gridzilla.last[:collection].offset
                                        else
                                          0
@@ -600,7 +600,7 @@ module Gridzilla
       def pagination_links(*args)
         options = args.extract_options!
 
-        if @gridzilla.last[:collection].is_a?(WillPaginate::Collection)
+        if @gridzilla.last[:collection].respond_to?(:total_pages)
           @view.will_paginate(@gridzilla.last[:collection], {:renderer => PaginationLinkRenderer}.merge(options))
         end
       end
