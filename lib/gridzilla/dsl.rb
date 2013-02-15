@@ -56,7 +56,7 @@ module Gridzilla
         data       = options[:data] || {}
 
         unless @gridzilla_script_loaded
-          concat("<script type='type/text' src='/javascripts/gridzilla.js'></script>")
+          concat("<%= <script type='type/text' src='/javascripts/gridzilla.js'></script> %>")
           @gridzilla_script_loaded = true
         end
 
