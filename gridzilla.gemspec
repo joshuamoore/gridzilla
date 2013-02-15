@@ -6,7 +6,6 @@ Gem::Specification.new do |s|
   s.name        = %q{gridzilla}
   s.version     = Gridzilla::VERSION
   s.authors     = ["Anthony Crumley, Josh Moore, Andrew Sellers"]
-  s.date        = %q{2013-1-1}
   s.email       = %q{tech@gradesfirst.com}
   s.homepage    = %q{https://github.com/Thoughtwright-LLC/gridzilla}
   s.summary     = %q{Grid based solution with action buttons}
