@@ -1,82 +1,101 @@
-$pastel_red:    #EF8F8F
-$pastel_green:  #CAE695
-$pastel_yellow: #EEE98D
-$small_radius: 3px
+$radius: 4px
+
+=gradient($from, $to)
+  /* fallback/image non-cover color */
+  background-color: $from
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient($from, $to)
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to))
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient($from, $to)
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient($from, $to)
+
+=transition($property, $duration, $function)
+  -webkit-transition: ($property $duration $function)
+  -moz-transition: ($property $duration $function)
+  -ms-transition: ($property $duration $function)
+  -o-transition: ($property $duration $function)
+  transition: ($property $duration $function)
 
 @mixin table_header_column_styles
   tr
-    :background-color #999
-    th
-      :font-weight bold
-      :font-size .9em
-      :letter-spacing -0.3px
-      :padding 5px 4px 5px 4px
-      :border-right 1px solid #CBCBCB
-      :width 12px
-      &.green, &.red, &.yellow
-        :background none
-      &.checkbox
-        :padding-left 4px
-      &.c
-        :text-align center
-      &.l
-        :text-align left
-      &.r
-        :text-align right
-      &.gz_sortable
-        :background url(/images/gridzilla/sort.gif) 100% 50% no-repeat
-        :padding-right 15px
-        :cursor pointer
-      &.gz_sort_asc, &.gz_sort_desc
-        :background-color #777
-        :color #fff
-      &.gz_sort_asc
-        :background-image url(/images/gridzilla/asc.gif)
-      &.gz_sort_desc
-        :background-image url(/images/gridzilla/desc.gif)
-      &:hover
-        :background-color #888
+    +gradient(#999, #777)
+  th
+    :font-size .9em
+    :letter-spacing -0.3px
+    :padding 5px 4px 5px 4px
+    :color #eee
+    :text-transform uppercase
+    :text-shadow 1px 1px 0px #555
+    :width 12px
+    &.green, &.red, &.yellow
+      :background none
+    &.checkbox
+      :padding-left 4px
+    &.center
+      :text-align center
+    &.left
+      :text-align left
+    &.right
+      :text-align right
+    &.gz_sortable
+      :background url(/assets/gridzilla/sort.gif) 100% 50% no-repeat
+      :padding-right 15px
+      :cursor pointer
+    &.gz_sort_asc, &.gz_sort_desc
+      :background-color #777
+      :color #fff
+    &.gz_sort_asc
+      :background-image url(/assets/gridzilla/asc.gif)
+    &.gz_sort_desc
+      :background-image url(/assets/gridzilla/desc.gif)
+    &:hover
+      :background #666
+      +transition( all, .2s, ease)
+
 
 //Generalize the checkbox selection.
 .gridzilla
-  table
-    thead
-    tr
-      .gz_checkbox
-        :width 12px
-        :height 12px
-        :background transparent url(/images/checkboxes.gif) 0 0 no-repeat
-      .gz_radio_button
-        :width 12px
-        :height 12px
-        :background transparent url(/images/radiobuttons.png) 0 0 no-repeat
-      &.ui-selected
-        .gz_checkbox
-          :background transparent url(/images/checkboxes.gif) 0 -12px no-repeat
-        .gz_radio_button
-          :background transparent url(/images/radiobuttons.png) 0 -12px no-repeat
-      &.ui-partial
-        .gz_checkbox
-          :background transparent url(/images/checkboxes.gif) 0 -24px no-repeat
-      &.ui-selecting
-        .gz_checkbox
-          :background transparent url(/images/checkboxes.gif) 0 -36px no-repeat
-        .gz_radio_button
-          :background transparent url(/images/radiobuttons.png) 0 -24px no-repeat
+  .gz_checkbox
+    :width 12px
+    :height 12px
+    :background transparent url(/assets/gridzilla/checkboxes.gif) 0 0 no-repeat
+  .gz_radio_button
+    :width 12px
+    :height 12px
+    :background transparent url(/assets/gridzilla/radiobuttons.png) 0 0 no-repeat
+  &.ui-selected
+    .gz_checkbox
+      :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -12px no-repeat
+    .gz_radio_button
+      :background transparent url(/assets/gridzilla/radiobuttons.png) 0 -12px no-repeat
+  &.ui-partial
+    .gz_checkbox
+      :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -24px no-repeat
+  &.ui-selecting
+    .gz_checkbox
+      :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -36px no-repeat
+    .gz_radio_button
+      :background transparent url(/assets/gridzilla/radiobuttons.png) 0 -24px no-repeat
 
 // Development Mode //////////////////////////////////////
 a.reload_link
   :font-size 10px
   :font-weight bold
   :display inline-block
-  :background url(../images/gridzilla/reload_icon.png) 0 0 no-repeat
+  :background url(/assets/gridzilla/reload_icon.png) 0 0 no-repeat
   :padding 0px 0 3px 18px
   :color #444
 
 .gridzilla
-  table.gz_table
-    :border-bottom 1px solid gray
+  .gz_table
     :width 100%
+    :border-collapse separate
+    :-webkit-border-radius $radius
+    :border-radius $radius
+    :border 1px solid #ccc
     th,td
       :border-right 1px solid #CBCBCB
       :width 12px
@@ -84,41 +103,44 @@ a.reload_link
       .gz_checkbox
         :width 12px
         :height 12px
-        :background transparent url(/images/checkboxes.gif) 0 0 no-repeat
+        :background transparent url(/assets/gridzilla/checkboxes.gif) 0 0 no-repeat
       .gz_radio_button
         :width 12px
         :height 12px
-        :background transparent url(/images/radiobuttons.png) 0 0 no-repeat
+        :background transparent url(/assets/gridzilla/radiobuttons.png) 0 0 no-repeat
       &.ui-selected
         .gz_checkbox
-          :background transparent url(/images/checkboxes.gif) 0 -12px no-repeat
+          :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -12px no-repeat
         .gz_radio_button
-          :background transparent url(/images/radiobuttons.png) 0 -12px no-repeat
+          :background transparent url(/assets/gridzilla/radiobuttons.png) 0 -12px no-repeat
       &.ui-partial
         .gz_checkbox
-          :background transparent url(/images/checkboxes.gif) 0 -24px no-repeat
+          :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -24px no-repeat
       &.ui-selecting
         .gz_checkbox
-          :background transparent url(/images/checkboxes.gif) 0 -36px no-repeat
+          :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -36px no-repeat
         .gz_radio_button
-          :background transparent url(/images/radiobuttons.png) 0 -24px no-repeat
+          :background transparent url(/assets/gridzilla/radiobuttons.png) 0 -24px no-repeat
       &.gz_highlight_row
         :background-color #faf37b
     thead
       @include table_header_column_styles
     tbody
       tr
-        :background #f3f3f3
+        +gradient(#fff, #f4f4f4)
         &.alt
-          :background #E3E3E3
+          +gradient(#f4f4f4, #efefef)
         &.over
-          :background #fff
-          +transition(all .3s)
+          :background #ddd
+          +transition(all, .15s, ease)
+          color: #000
         &.ui-selected
-          :background #FEE4A0
+          +gradient(#85b9cb, #5792ae)
+          :color #fff
+          a 
+            :color #fff
         &.ui-selecting
           :background #FEEA70
-
       td
         :height 20px
         :padding 5px 4px 5px 4px
@@ -137,10 +159,8 @@ a.reload_link
       .r
         :text-align right
       .yes, .green
-        :background-color $pastel_green
         :border 1px dotted #A0B676
       .yellow
-        :background-color $pastel_yellow
       .link_list
         ul
           :margin-left 0
@@ -159,22 +179,18 @@ a.reload_link
 
       &.puts_green
         .accepts_color, .accepts_green
-          :background $pastel_green
       &.puts_red
         .accepts_color, .accepts_red
-          :background $pastel_red
       &.puts_yellow
         .accepts_color, .accepts_yellow
-          :background $pastel_yellow
 
   .fht_fixed_header
     :border-bottom 1px solid gray
-    :background #999
-    table
-      thead
-        @include table_header_column_styles
+    :background #bbb
+    thead
+      @include table_header_column_styles
 
-  .fht_table_body
+  .fht_table_body    
     table.gz_table
       tbody
         tr
@@ -207,27 +223,71 @@ a.reload_link
       :margin 0 3px 3px 3px
       &.right
         :text-align right
-    .gz_buttons_top
-      .gz_button
-        :border 1px solid black
-        +border-radius($small_radius)
-        :float left
-        :padding 2px 2px 4px 2px
-        :margin 0 3px 3px 0
-        :background #DBDBDB url(/images/small_gray_gradient.png) bottom repeat-x
-        :border 1px solid #B6B6B6
-        &:hover
-          :background #B3B3B3
-          a
-            :color #000
-        a
-          :font-weight bold
-          :background url(/images/add_16px.png) no-repeat 0px 1px
-          :font-size 11px
-          :display block
-          :padding 2px 0 2px 19px
-          :text-decoration none
-          :color #414141
+  .gz_button
+    :-webkit-border-radius $radius
+    :border-radius $radius
+    :border 1px solid black
+    :display inline-block
+    :*display inline
+    :padding 3px 6px 3px 5px
+    :margin 0 3px 3px 0
+    :background-color #d6d6d6
+    :border 1px solid #B6B6B6
+    :background-color #ffffff
+    +gradient(#fff, #e6e6e6)
+    &:hover
+      +gradient(#eee, #ccc)
+      a
+        :color #000
+    a
+      &.add
+        :background url(/assets/gridzilla/add_16px.png) no-repeat
+      &.clock
+        :background url(/assets/gridzilla/clock_16px.png) no-repeat
+      &.check
+        :background url(/assets/gridzilla/check_16px.png) no-repeat
+      &.read
+        :background url(/assets/gridzilla/read_16px.png) no-repeat
+      &.allread
+        :background url(/assets/gridzilla/allread_16px.png) no-repeat
+      &.note
+        :background url(/assets/gridzilla/note_16px.png) no-repeat
+      &.remove
+        :background url(/assets/gridzilla/delete_16px.png) no-repeat
+      &.report
+        :background url(/assets/gridzilla/report_16px.png) no-repeat
+      &.print
+        :background url(/assets/gridzilla/printer_16px.png) no-repeat
+      &.send_message
+        :background url(/assets/gridzilla/message_16px.png) no-repeat
+      &.tag
+        :background url(/assets/gridzilla/tag_16px.png) no-repeat
+      &.dropclass
+        :background url(/assets/gridzilla/drop_class_16px.png) no-repeat
+      &.edit
+        :background url(/assets/gridzilla/edit_16px.png) no-repeat
+      &.excel
+        :background url(/assets/gridzilla/page_excel.png) no-repeat
+      &.match
+        :background url(/assets/gridzilla/match_16px.png) no-repeat
+      &.no_show
+        :background url(/assets/gridzilla/noshow_16px.png) no-repeat
+      &.send_document
+        :background url(/assets/gridzilla/send_doc_16px.png) no-repeat
+      &.move_up
+        :background url(/assets/gridzilla/arrow_up_16px.png) no-repeat
+      &.clipboard
+        :background url(/assets/gridzilla/clipboard_16px.png) no-repeat
+      &.copytime
+        :background url(/assets/gridzilla/copy_16px.png) no-repeat
+      &.hourglass
+        :background url(/assets/gridzilla/hourglass_16px.png) no-repeat
+      &.firstavailable
+        :background url(/assets/gridzilla/first_available_16px.png) no-repeat
+      &.allclassattendance
+        :background url(/assets/gridzilla/allattendance_16px.png) no-repeat
+      &.toggle
+        :background url(/assets/gridzilla/toggle_16px.png) no-repeat
 
   .gz_empty
     :min-height 60px
@@ -257,14 +317,7 @@ a.reload_link
     :margin 0px 0 0px 0
     :height 60px
 
-  .gz_tooltip
-    //Nothing here yet.
-
-  .red
-    :background-color $pastel_red
-
   .gz_accept
-    :background $pastel_green
     :text-align center
     span
       &.link
@@ -285,7 +338,6 @@ a.reload_link
         :display none
 
   .gz_error
-    :background $pastel_red
     :text-align center
     span
       &.link
@@ -306,13 +358,6 @@ a.reload_link
     :margin -5px 5px 0px 0px
     :border 1px solid #CBCBCB
     :color  #333
-  .red
-    :background-color $pastel_red
-  .green
-    :background-color $pastel_green
-  .yellow
-    :background-color $pastel_yellow
-
 
 .gz_table_container 
   :margin 7px 0 0 0

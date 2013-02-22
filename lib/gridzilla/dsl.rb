@@ -695,6 +695,10 @@ module Gridzilla
       end
     end
   end
+
+  def Gridzilla.pipeline_enabled?
+    Rails.configuration.respond_to?('assets') && Rails.configuration.assets.enabled
+  end
 end
 
 ActionController::Base.send :include, Gridzilla::Controller
