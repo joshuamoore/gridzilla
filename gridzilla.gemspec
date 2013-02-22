@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency %q<actionpack>
+  s.add_dependency 'will_paginate', '~> 3.0'
 
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec", "~> 2.6"
