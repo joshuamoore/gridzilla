@@ -9,10 +9,12 @@ module Gridzilla
         if Gridzilla.pipeline_enabled?
           copy_file "initializer/gridzilla.rb", "config/initializers/gridzilla.rb"
           copy_file "stylesheets/gridzilla.sass", "app/assets/stylesheets/gridzilla.sass"
+          copy_file "javascripts/jquery.blockUI.js", "app/assets/javascripts/jquery.blockUI.js"
           directory "images/", "app/assets/images/gridzilla/"
         else
           copy_file "initializer/gridzilla.rb", "config/initializers/gridzilla.rb"
           copy_file "stylesheets/gridzilla.sass", "public/stylesheets/gridzilla.sass"
+          copy_file "javascripts/jquery.blockUI.js", "public/javascripts/jquery.blockUI.js"
           directory "images/", "public/images/gridzilla/"
         end
       end

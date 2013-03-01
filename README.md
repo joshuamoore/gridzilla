@@ -7,7 +7,7 @@ list and perform actions on rows.
 Installation Steps
 =======
 
-Run the generator to place the images, stylesheet, and initializer in the
+Run the generator to place the images, javascript, stylesheet, and initializer in the
 correct locations with this command:
 
 rails g gridzilla:install
