@@ -114,9 +114,6 @@ module Gridzilla
                       gridzilla.deactivate_multi_page_select(grid_name);
                     }
 
-                    if (gridzilla.get_option(grid_name, 'form_var')) {
-                      $('#'+gridzilla.get_option(grid_name, 'form_var')).val(gridzilla.selected_values(grid_name));
-                    }
                   });
 
 
@@ -155,9 +152,6 @@ module Gridzilla
                     gridzilla.select_all_adorning($(element).closest('.gridzilla'), grid_name);
                   }
 
-                  if (gridzilla.get_option(grid_name, 'form_var')) {
-                    $('#'+gridzilla.get_option(grid_name, 'form_var')).val(gridzilla.selected_values(grid_name));
-                  }
                 };
 
                 gridzilla.select_all_adorning = function(grid_jqo, grid_name) {
@@ -370,13 +364,8 @@ module Gridzilla
         concat(content_tag(:script, <<-SCRIPT, nil, false))
           gridzilla.set_data('#{name.html_safe}', #{data.to_json.html_safe});
           #{"gridzilla.set_option('#{name.html_safe}', 'height', #{options[:height].to_json.html_safe});" if options[:height]}
-        #{"gridzilla.set_option('#{name.html_safe}', 'form_var', #{options[:form_var].to_json.html_safe});" if options[:form_var]}
         #{"gridzilla.set_option('#{name.html_safe}', 'url', #{options[:url].to_json.html_safe});" if options[:url]}
        SCRIPT
-
-        if options[:form_var]
-          concat("<input type='hidden' value='' id='#{options[:form_var]}' name='#{options[:form_var]}' />")
-        end
 
         if block_given?
           @gridzilla ||= []
