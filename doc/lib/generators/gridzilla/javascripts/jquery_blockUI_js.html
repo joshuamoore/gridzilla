@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>jquery.blockUI.js - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../../../index.html">Home</a>
+    <a href="../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../../../CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li class="file"><a href="../../../../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="../../../../MIT-LICENSE.html">MIT-LICENSE</a>
+  
+    <li class="file"><a href="../../../../README_md.html">README</a>
+  
+    <li class="file"><a href="../../../../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../../../../doc/ActionController_html.html">ActionController.html</a>
+  
+    <li class="file"><a href="../../../../doc/ActionView_html.html">ActionView.html</a>
+  
+    <li class="file"><a href="../../../../doc/BlankSlate_html.html">BlankSlate.html</a>
+  
+    <li class="file"><a href="../../../../doc/CHANGELOG_md_html.html">CHANGELOG_md.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla_html.html">Gridzilla.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Controller_html.html">Controller.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Controller/ClassMethods_html.html">ClassMethods.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Controller/GridBuilder_html.html">GridBuilder.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Css_html.html">Css.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Generators_html.html">Generators.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Generators/InstallGenerator_html.html">InstallGenerator.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Gobbler_html.html">Gobbler.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Message_html.html">Message.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/PaginationLinkRenderer_html.html">PaginationLinkRenderer.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View_html.html">View.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View/AjaxGrid_html.html">AjaxGrid.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View/Grid_html.html">Grid.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View/InstanceMethods_html.html">InstanceMethods.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View/Panel_html.html">Panel.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View/Row_html.html">Row.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/ViewDsl_html.html">ViewDsl.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/ViewDsl/Base_html.html">Base.html</a>
+  
+    <li class="file"><a href="../../../../doc/GridzillaTest_html.html">GridzillaTest.html</a>
+  
+    <li class="file"><a href="../../../../doc/Kernel_html.html">Kernel.html</a>
+  
+    <li class="file"><a href="../../../../doc/MIT-LICENSE_html.html">MIT-LICENSE.html</a>
+  
+    <li class="file"><a href="../../../../doc/Mime_html.html">Mime.html</a>
+  
+    <li class="file"><a href="../../../../doc/Module_html.html">Module.html</a>
+  
+    <li class="file"><a href="../../../../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../../../../doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="../../../../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../../../../doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="../../../../doc/Symbol_html.html">Symbol.html</a>
+  
+    <li class="file"><a href="../../../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../../../../doc/gridzilla_gemspec_html.html">gridzilla_gemspec.html</a>
+  
+    <li class="file"><a href="../../../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../../../../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../../../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../../../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../../../../doc/lib/generators/gridzilla/javascripts/jquery_blockUI_js_html.html">jquery_blockUI_js.html</a>
+  
+    <li class="file"><a href="../../../../doc/lib/generators/gridzilla/stylesheets/gridzilla_sass_html.html">gridzilla_sass.html</a>
+  
+    <li class="file"><a href="../../../../doc/lib/tasks/install_rake_html.html">install_rake.html</a>
+  
+    <li class="file"><a href="../../../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../../../../gridzilla_gemspec.html">gridzilla.gemspec</a>
+  
+    <li class="file"><a href="../../../../lib/generators/gridzilla/javascripts/jquery_blockUI_js.html">jquery.blockUI.js</a>
+  
+    <li class="file"><a href="../../../../lib/generators/gridzilla/stylesheets/gridzilla_sass.html">gridzilla.sass</a>
+  
+    <li class="file"><a href="../../../../lib/tasks/install_rake.html">install.rake</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../../ActionController.html">ActionController</a>
+  
+    <li><a href="../../../../ActionView.html">ActionView</a>
+  
+    <li><a href="../../../../BlankSlate.html">BlankSlate</a>
+  
+    <li><a href="../../../../BlankSlate.html">BlankSlate</a>
+  
+    <li><a href="../../../../Gridzilla.html">Gridzilla</a>
+  
+    <li><a href="../../../../Gridzilla/Controller.html">Gridzilla::Controller</a>
+  
+    <li><a href="../../../../Gridzilla/Controller/ClassMethods.html">Gridzilla::Controller::ClassMethods</a>
+  
+    <li><a href="../../../../Gridzilla/Controller/GridBuilder.html">Gridzilla::Controller::GridBuilder</a>
+  
+    <li><a href="../../../../Gridzilla/Css.html">Gridzilla::Css</a>
+  
+    <li><a href="../../../../Gridzilla/Generators.html">Gridzilla::Generators</a>
+  
+    <li><a href="../../../../Gridzilla/Generators/InstallGenerator.html">Gridzilla::Generators::InstallGenerator</a>
+  
+    <li><a href="../../../../Gridzilla/Gobbler.html">Gridzilla::Gobbler</a>
+  
+    <li><a href="../../../../Gridzilla/Message.html">Gridzilla::Message</a>
+  
+    <li><a href="../../../../Gridzilla/PaginationLinkRenderer.html">Gridzilla::PaginationLinkRenderer</a>
+  
+    <li><a href="../../../../Gridzilla/View.html">Gridzilla::View</a>
+  
+    <li><a href="../../../../Gridzilla/View/AjaxGrid.html">Gridzilla::View::AjaxGrid</a>
+  
+    <li><a href="../../../../Gridzilla/View/Grid.html">Gridzilla::View::Grid</a>
+  
+    <li><a href="../../../../Gridzilla/View/InstanceMethods.html">Gridzilla::View::InstanceMethods</a>
+  
+    <li><a href="../../../../Gridzilla/View/Panel.html">Gridzilla::View::Panel</a>
+  
+    <li><a href="../../../../Gridzilla/View/Row.html">Gridzilla::View::Row</a>
+  
+    <li><a href="../../../../Gridzilla/ViewDsl.html">Gridzilla::ViewDsl</a>
+  
+    <li><a href="../../../../Gridzilla/ViewDsl/Base.html">Gridzilla::ViewDsl::Base</a>
+  
+    <li><a href="../../../../GridzillaTest.html">GridzillaTest</a>
+  
+    <li><a href="../../../../Kernel.html">Kernel</a>
+  
+    <li><a href="../../../../Mime.html">Mime</a>
+  
+    <li><a href="../../../../Module.html">Module</a>
+  
+    <li><a href="../../../../Object.html">Object</a>
+  
+    <li><a href="../../../../String.html">String</a>
+  
+    <li><a href="../../../../Symbol.html">Symbol</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<pre>!
+ jQuery blockUI plugin
+ Version 2.56.0-2013.01.31
+ @requires jQuery v1.7 or later
+
+ Examples at: http://malsup.com/jquery/block/
+ Copyright (c) 2007-2013 M. Alsup
+ Dual licensed under the MIT and GPL licenses:
+ http://www.opensource.org/licenses/mit-license.php
+ http://www.gnu.org/licenses/gpl.html
+
+ Thanks to Amir-Hossein Sobhi for some excellent contributions!</pre>
+
+<p>;(function() { “use strict”;</p>
+
+<pre class="ruby"><span class="ruby-identifier">function</span> <span class="ruby-identifier">setup</span>($) {
+        <span class="ruby-identifier">$.</span><span class="ruby-identifier">fn</span>.<span class="ruby-identifier">_fadeIn</span> = <span class="ruby-identifier">$.</span><span class="ruby-identifier">fn</span>.<span class="ruby-identifier">fadeIn</span>;
+
+        <span class="ruby-identifier">var</span> <span class="ruby-identifier">noOp</span> = <span class="ruby-identifier">$.</span><span class="ruby-identifier">noop</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">function</span>() {};
+
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">this</span> <span class="ruby-identifier">bit</span> <span class="ruby-identifier">is</span> <span class="ruby-identifier">to</span> <span class="ruby-keyword">ensure</span> <span class="ruby-identifier">we</span> <span class="ruby-identifier">don</span><span class="ruby-string">'t call setExpression when we shouldn'</span><span class="ruby-identifier">t</span> (<span class="ruby-identifier">with</span> <span class="ruby-identifier">extra</span> <span class="ruby-identifier">muscle</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">handle</span>
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">retarded</span> <span class="ruby-identifier">userAgent</span> <span class="ruby-identifier">strings</span> <span class="ruby-identifier">on</span> <span class="ruby-constant">Vista</span>)
+        <span class="ruby-identifier">var</span> <span class="ruby-identifier">msie</span> = <span class="ruby-regexp">/MSIE/</span>.<span class="ruby-identifier">test</span>(<span class="ruby-identifier">navigator</span>.<span class="ruby-identifier">userAgent</span>);
+        <span class="ruby-identifier">var</span> <span class="ruby-identifier">ie6</span>  = <span class="ruby-regexp">/MSIE 6.0/</span>.<span class="ruby-identifier">test</span>(<span class="ruby-identifier">navigator</span>.<span class="ruby-identifier">userAgent</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-regexp">/MSIE 8.0/</span>.<span class="ruby-identifier">test</span>(<span class="ruby-identifier">navigator</span>.<span class="ruby-identifier">userAgent</span>);
+        <span class="ruby-identifier">var</span> <span class="ruby-identifier">mode</span> = <span class="ruby-identifier">document</span>.<span class="ruby-identifier">documentMode</span> <span class="ruby-operator">||</span> <span class="ruby-value">0</span>;
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">var</span> <span class="ruby-identifier">setExpr</span> = <span class="ruby-identifier">msie</span> <span class="ruby-operator">&amp;&amp;</span> ((<span class="ruby-identifier">$.</span><span class="ruby-identifier">browser</span>.<span class="ruby-identifier">version</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">8</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">mode</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">8</span>);
+        <span class="ruby-identifier">var</span> <span class="ruby-identifier">setExpr</span> = <span class="ruby-identifier">$.</span><span class="ruby-identifier">isFunction</span>( <span class="ruby-identifier">document</span>.<span class="ruby-identifier">createElement</span>(<span class="ruby-string">'div'</span>).<span class="ruby-identifier">style</span>.<span class="ruby-identifier">setExpression</span> );
+
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">global</span> $ <span class="ruby-identifier">methods</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">blocking</span><span class="ruby-operator">/</span><span class="ruby-identifier">unblocking</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">entire</span> <span class="ruby-identifier">page</span>
+        <span class="ruby-identifier">$.</span><span class="ruby-identifier">blockUI</span>   = <span class="ruby-identifier">function</span>(<span class="ruby-identifier">opts</span>) { <span class="ruby-identifier">install</span>(<span class="ruby-identifier">window</span>, <span class="ruby-identifier">opts</span>); };
+        <span class="ruby-identifier">$.</span><span class="ruby-identifier">unblockUI</span> = <span class="ruby-identifier">function</span>(<span class="ruby-identifier">opts</span>) { <span class="ruby-identifier">remove</span>(<span class="ruby-identifier">window</span>, <span class="ruby-identifier">opts</span>); };
+
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">convenience</span> <span class="ruby-identifier">method</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">quick</span> <span class="ruby-identifier">growl</span><span class="ruby-operator">-</span><span class="ruby-identifier">like</span> <span class="ruby-identifier">notifications</span>  (<span class="ruby-identifier">http</span>:<span class="ruby-operator">/</span><span class="ruby-regexp">/www.google.com/</span><span class="ruby-identifier">earch?</span><span class="ruby-identifier">q</span>=<span class="ruby-identifier">growl</span>)
+        <span class="ruby-identifier">$.</span><span class="ruby-identifier">growlUI</span> = <span class="ruby-identifier">function</span>(<span class="ruby-identifier">title</span>, <span class="ruby-identifier">message</span>, <span class="ruby-identifier">timeout</span>, <span class="ruby-identifier">onClose</span>) {
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">$m</span> = $(<span class="ruby-string">'&lt;div class=&quot;growlUI&quot;&gt;&lt;/div&gt;'</span>);
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">title</span>) <span class="ruby-identifier">$m</span>.<span class="ruby-identifier">append</span>(<span class="ruby-string">'&lt;h1&gt;'</span><span class="ruby-operator">+</span><span class="ruby-identifier">title</span><span class="ruby-operator">+</span><span class="ruby-string">'&lt;/h1&gt;'</span>);
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">message</span>) <span class="ruby-identifier">$m</span>.<span class="ruby-identifier">append</span>(<span class="ruby-string">'&lt;h2&gt;'</span><span class="ruby-operator">+</span><span class="ruby-identifier">message</span><span class="ruby-operator">+</span><span class="ruby-string">'&lt;/h2&gt;'</span>);
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">timeout</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">undefined</span>) <span class="ruby-identifier">timeout</span> = <span class="ruby-value">3000</span>;
+                <span class="ruby-identifier">$.</span><span class="ruby-identifier">blockUI</span>({
+                        <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">$m</span>, <span class="ruby-identifier">fadeIn</span><span class="ruby-operator">:</span> <span class="ruby-value">700</span>, <span class="ruby-identifier">fadeOut</span><span class="ruby-operator">:</span> <span class="ruby-value">1000</span>, <span class="ruby-identifier">centerY</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>,
+                        <span class="ruby-identifier">timeout</span><span class="ruby-operator">:</span> <span class="ruby-identifier">timeout</span>, <span class="ruby-identifier">showOverlay</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>,
+                        <span class="ruby-identifier">onUnblock</span><span class="ruby-operator">:</span> <span class="ruby-identifier">onClose</span>,
+                        <span class="ruby-identifier">css</span><span class="ruby-operator">:</span> <span class="ruby-identifier">$.</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">defaults</span>.<span class="ruby-identifier">growlCSS</span>
+                });
+        };
+
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">plugin</span> <span class="ruby-identifier">method</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">blocking</span> <span class="ruby-identifier">element</span> <span class="ruby-identifier">content</span>
+        <span class="ruby-identifier">$.</span><span class="ruby-identifier">fn</span>.<span class="ruby-identifier">block</span> = <span class="ruby-identifier">function</span>(<span class="ruby-identifier">opts</span>) {
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">fullOpts</span> = <span class="ruby-identifier">$.</span><span class="ruby-identifier">extend</span>({}, <span class="ruby-identifier">$.</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">defaults</span>, <span class="ruby-identifier">opts</span> <span class="ruby-operator">||</span> {});
+                <span class="ruby-identifier">this</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">function</span>() {
+                        <span class="ruby-identifier">var</span> <span class="ruby-identifier">$el</span> = $(<span class="ruby-identifier">this</span>);
+                        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">fullOpts</span>.<span class="ruby-identifier">ignoreIfBlocked</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">$el</span>.<span class="ruby-identifier">data</span>(<span class="ruby-string">'blockUI.isBlocked'</span>))
+                                <span class="ruby-keyword">return</span>;
+                        <span class="ruby-identifier">$el</span>.<span class="ruby-identifier">unblock</span>({ <span class="ruby-identifier">fadeOut</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span> });
+                });
+
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">this</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">function</span>() {
+                        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">$.</span><span class="ruby-identifier">css</span>(<span class="ruby-identifier">this</span>,<span class="ruby-string">'position'</span>) <span class="ruby-operator">==</span> <span class="ruby-string">'static'</span>) {
+                                <span class="ruby-identifier">this</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">position</span> = <span class="ruby-string">'relative'</span>;
+                                $(<span class="ruby-identifier">this</span>).<span class="ruby-identifier">data</span>(<span class="ruby-string">'blockUI.static'</span>, <span class="ruby-keyword">true</span>);
+                        }
+                        <span class="ruby-identifier">this</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">zoom</span> = <span class="ruby-value">1</span>; <span class="ruby-regexp">//</span> <span class="ruby-identifier">force</span> <span class="ruby-string">'hasLayout'</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">ie</span>
+                        <span class="ruby-identifier">install</span>(<span class="ruby-identifier">this</span>, <span class="ruby-identifier">opts</span>);
+                });
+        };
+
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">plugin</span> <span class="ruby-identifier">method</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">unblocking</span> <span class="ruby-identifier">element</span> <span class="ruby-identifier">content</span>
+        <span class="ruby-identifier">$.</span><span class="ruby-identifier">fn</span>.<span class="ruby-identifier">unblock</span> = <span class="ruby-identifier">function</span>(<span class="ruby-identifier">opts</span>) {
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">this</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">function</span>() {
+                        <span class="ruby-identifier">remove</span>(<span class="ruby-identifier">this</span>, <span class="ruby-identifier">opts</span>);
+                });
+        };
+
+        <span class="ruby-identifier">$.</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">version</span> = <span class="ruby-value">2.56</span>; <span class="ruby-regexp">//</span> <span class="ruby-value">2</span><span class="ruby-identifier">nd</span> <span class="ruby-identifier">generation</span> <span class="ruby-identifier">blocking</span> <span class="ruby-identifier">at</span> <span class="ruby-identifier">no</span> <span class="ruby-identifier">extra</span> <span class="ruby-identifier">cost!</span>
+
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">override</span> <span class="ruby-identifier">these</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">your</span> <span class="ruby-identifier">code</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">change</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">default</span> <span class="ruby-identifier">behavior</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">style</span>
+        <span class="ruby-identifier">$.</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">defaults</span> = {
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">message</span> <span class="ruby-identifier">displayed</span> <span class="ruby-keyword">when</span> <span class="ruby-identifier">blocking</span> (<span class="ruby-identifier">use</span> <span class="ruby-identifier">null</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">no</span> <span class="ruby-identifier">message</span>)
+                <span class="ruby-identifier">message</span><span class="ruby-operator">:</span>  <span class="ruby-string">'&lt;h1&gt;Please wait...&lt;/h1&gt;'</span>,
+
+                <span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-identifier">null</span>,            <span class="ruby-regexp">//</span> <span class="ruby-identifier">title</span> <span class="ruby-identifier">string</span>; <span class="ruby-identifier">only</span> <span class="ruby-identifier">used</span> <span class="ruby-keyword">when</span> <span class="ruby-identifier">theme</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>
+                <span class="ruby-identifier">draggable</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>,        <span class="ruby-regexp">//</span> <span class="ruby-identifier">only</span> <span class="ruby-identifier">used</span> <span class="ruby-keyword">when</span> <span class="ruby-identifier">theme</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span> (<span class="ruby-identifier">requires</span> <span class="ruby-identifier">jquery</span><span class="ruby-operator">-</span><span class="ruby-identifier">ui</span>.<span class="ruby-identifier">js</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">be</span> <span class="ruby-identifier">loaded</span>)
+
+                <span class="ruby-identifier">theme</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>, <span class="ruby-regexp">//</span> <span class="ruby-identifier">set</span> <span class="ruby-identifier">to</span> <span class="ruby-keyword">true</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">use</span> <span class="ruby-identifier">with</span> <span class="ruby-identifier">jQuery</span> <span class="ruby-constant">UI</span> <span class="ruby-identifier">themes</span>
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">styles</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">message</span> <span class="ruby-keyword">when</span> <span class="ruby-identifier">blocking</span>; <span class="ruby-keyword">if</span> <span class="ruby-identifier">you</span> <span class="ruby-identifier">wish</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">disable</span>
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">these</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">use</span> <span class="ruby-identifier">an</span> <span class="ruby-identifier">external</span> <span class="ruby-identifier">stylesheet</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">do</span> <span class="ruby-identifier">this</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">your</span> <span class="ruby-identifier">code</span><span class="ruby-operator">:</span>
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">$.</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">defaults</span>.<span class="ruby-identifier">css</span> = {};
+                <span class="ruby-identifier">css</span><span class="ruby-operator">:</span> {
+                        <span class="ruby-identifier">padding</span><span class="ruby-operator">:</span>        <span class="ruby-value">0</span>,
+                        <span class="ruby-identifier">margin</span><span class="ruby-operator">:</span>         <span class="ruby-value">0</span>,
+                        <span class="ruby-identifier">width</span><span class="ruby-operator">:</span>          <span class="ruby-string">'30%'</span>,
+                        <span class="ruby-identifier">top</span><span class="ruby-operator">:</span>            <span class="ruby-string">'40%'</span>,
+                        <span class="ruby-identifier">left</span><span class="ruby-operator">:</span>           <span class="ruby-string">'35%'</span>,
+                        <span class="ruby-identifier">textAlign</span><span class="ruby-operator">:</span>      <span class="ruby-string">'center'</span>,
+                        <span class="ruby-identifier">color</span><span class="ruby-operator">:</span>          <span class="ruby-string">'#000'</span>,
+                        <span class="ruby-identifier">border</span><span class="ruby-operator">:</span>         <span class="ruby-string">'3px solid #aaa'</span>,
+                        <span class="ruby-identifier">backgroundColor</span>:<span class="ruby-string">'#fff'</span>,
+                        <span class="ruby-identifier">cursor</span><span class="ruby-operator">:</span>         <span class="ruby-string">'wait'</span>
+                },
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">minimal</span> <span class="ruby-identifier">style</span> <span class="ruby-identifier">set</span> <span class="ruby-identifier">used</span> <span class="ruby-keyword">when</span> <span class="ruby-identifier">themes</span> <span class="ruby-identifier">are</span> <span class="ruby-identifier">used</span>
+                <span class="ruby-identifier">themedCSS</span><span class="ruby-operator">:</span> {
+                        <span class="ruby-identifier">width</span><span class="ruby-operator">:</span>  <span class="ruby-string">'30%'</span>,
+                        <span class="ruby-identifier">top</span><span class="ruby-operator">:</span>    <span class="ruby-string">'40%'</span>,
+                        <span class="ruby-identifier">left</span><span class="ruby-operator">:</span>   <span class="ruby-string">'35%'</span>
+                },
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">styles</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">overlay</span>
+                <span class="ruby-identifier">overlayCSS</span><span class="ruby-operator">:</span>  {
+                        <span class="ruby-identifier">backgroundColor</span><span class="ruby-operator">:</span>        <span class="ruby-string">'#000'</span>,
+                        <span class="ruby-identifier">opacity</span><span class="ruby-operator">:</span>                        <span class="ruby-value">0.6</span>,
+                        <span class="ruby-identifier">cursor</span><span class="ruby-operator">:</span>                         <span class="ruby-string">'wait'</span>
+                },
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">style</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">replace</span> <span class="ruby-identifier">wait</span> <span class="ruby-identifier">cursor</span> <span class="ruby-identifier">before</span> <span class="ruby-identifier">unblocking</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">correct</span> <span class="ruby-identifier">issue</span>
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">of</span> <span class="ruby-identifier">lingering</span> <span class="ruby-identifier">wait</span> <span class="ruby-identifier">cursor</span>
+                <span class="ruby-identifier">cursorReset</span><span class="ruby-operator">:</span> <span class="ruby-string">'default'</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">styles</span> <span class="ruby-identifier">applied</span> <span class="ruby-keyword">when</span> <span class="ruby-identifier">using</span> <span class="ruby-identifier">$.</span><span class="ruby-identifier">growlUI</span>
+                <span class="ruby-identifier">growlCSS</span><span class="ruby-operator">:</span> {
+                        <span class="ruby-identifier">width</span><span class="ruby-operator">:</span>          <span class="ruby-string">'350px'</span>,
+                        <span class="ruby-identifier">top</span><span class="ruby-operator">:</span>            <span class="ruby-string">'10px'</span>,
+                        <span class="ruby-identifier">left</span><span class="ruby-operator">:</span>           <span class="ruby-string">''</span>,
+                        <span class="ruby-identifier">right</span><span class="ruby-operator">:</span>          <span class="ruby-string">'10px'</span>,
+                        <span class="ruby-identifier">border</span><span class="ruby-operator">:</span>         <span class="ruby-string">'none'</span>,
+                        <span class="ruby-identifier">padding</span><span class="ruby-operator">:</span>        <span class="ruby-string">'5px'</span>,
+                        <span class="ruby-identifier">opacity</span><span class="ruby-operator">:</span>        <span class="ruby-value">0.6</span>,
+                        <span class="ruby-identifier">cursor</span><span class="ruby-operator">:</span>         <span class="ruby-string">'default'</span>,
+                        <span class="ruby-identifier">color</span><span class="ruby-operator">:</span>          <span class="ruby-string">'#fff'</span>,
+                        <span class="ruby-identifier">backgroundColor</span><span class="ruby-operator">:</span> <span class="ruby-string">'#000'</span>,
+                        <span class="ruby-string">'-webkit-border-radius'</span><span class="ruby-operator">:</span><span class="ruby-string">'10px'</span>,
+                        <span class="ruby-string">'-moz-border-radius'</span><span class="ruby-operator">:</span>   <span class="ruby-string">'10px'</span>,
+                        <span class="ruby-string">'border-radius'</span><span class="ruby-operator">:</span>                <span class="ruby-string">'10px'</span>
+                },
+
+                <span class="ruby-regexp">//</span> <span class="ruby-constant">IE</span> <span class="ruby-identifier">issues</span><span class="ruby-operator">:</span> <span class="ruby-string">'about:blank'</span> <span class="ruby-identifier">fails</span> <span class="ruby-identifier">on</span> <span class="ruby-constant">HTTPS</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">javascript</span>:<span class="ruby-keyword">false</span> <span class="ruby-identifier">is</span> <span class="ruby-identifier">s</span><span class="ruby-operator">-</span><span class="ruby-identifier">l</span><span class="ruby-operator">-</span><span class="ruby-identifier">o</span><span class="ruby-operator">-</span><span class="ruby-identifier">w</span>
+                <span class="ruby-regexp">//</span> (<span class="ruby-identifier">hat</span> <span class="ruby-identifier">tip</span> <span class="ruby-identifier">to</span> <span class="ruby-constant">Jorge</span> <span class="ruby-constant">H</span>. <span class="ruby-constant">N</span>. <span class="ruby-identifier">de</span> <span class="ruby-constant">Vasconcelos</span>)
+                  <span class="ruby-identifier">jshint</span> <span class="ruby-identifier">scripturl</span>:<span class="ruby-keyword">true</span>   
+                <span class="ruby-identifier">iframeSrc</span><span class="ruby-operator">:</span> <span class="ruby-regexp">/^https/</span>.<span class="ruby-identifier">test</span>(<span class="ruby-identifier">window</span>.<span class="ruby-identifier">location</span>.<span class="ruby-identifier">href</span> <span class="ruby-operator">||</span> <span class="ruby-string">''</span>) <span class="ruby-operator">?</span> <span class="ruby-string">'javascript:false'</span> <span class="ruby-operator">:</span> <span class="ruby-string">'about:blank'</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">force</span> <span class="ruby-identifier">usage</span> <span class="ruby-identifier">of</span> <span class="ruby-identifier">iframe</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">non</span><span class="ruby-operator">-</span><span class="ruby-constant">IE</span> <span class="ruby-identifier">browsers</span> (<span class="ruby-identifier">handy</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">blocking</span> <span class="ruby-identifier">applets</span>)
+                <span class="ruby-identifier">forceIframe</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">z</span><span class="ruby-operator">-</span><span class="ruby-identifier">index</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">blocking</span> <span class="ruby-identifier">overlay</span>
+                <span class="ruby-identifier">baseZ</span><span class="ruby-operator">:</span> <span class="ruby-value">1000</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">set</span> <span class="ruby-identifier">these</span> <span class="ruby-identifier">to</span> <span class="ruby-keyword">true</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">have</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">message</span> <span class="ruby-identifier">automatically</span> <span class="ruby-identifier">centered</span>
+                <span class="ruby-identifier">centerX</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>, <span class="ruby-regexp">//</span> <span class="ruby-operator">&lt;</span><span class="ruby-operator">-</span><span class="ruby-operator">-</span> <span class="ruby-identifier">only</span> <span class="ruby-identifier">effects</span> <span class="ruby-identifier">element</span> <span class="ruby-identifier">blocking</span> (<span class="ruby-identifier">page</span> <span class="ruby-identifier">block</span> <span class="ruby-identifier">controlled</span> <span class="ruby-identifier">via</span> <span class="ruby-identifier">css</span> <span class="ruby-identifier">above</span>)
+                <span class="ruby-identifier">centerY</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">allow</span> <span class="ruby-identifier">body</span> <span class="ruby-identifier">element</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">be</span> <span class="ruby-identifier">stetched</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">ie6</span>; <span class="ruby-identifier">this</span> <span class="ruby-identifier">makes</span> <span class="ruby-identifier">blocking</span> <span class="ruby-identifier">look</span> <span class="ruby-identifier">better</span>
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">on</span> <span class="ruby-string">&quot;short&quot;</span> <span class="ruby-identifier">pages</span>.  <span class="ruby-identifier">disable</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">you</span> <span class="ruby-identifier">wish</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">prevent</span> <span class="ruby-identifier">changes</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">body</span> <span class="ruby-identifier">height</span>
+                <span class="ruby-identifier">allowBodyStretch</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">enable</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">you</span> <span class="ruby-identifier">want</span> <span class="ruby-identifier">key</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">mouse</span> <span class="ruby-identifier">events</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">be</span> <span class="ruby-identifier">disabled</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">content</span> <span class="ruby-identifier">that</span> <span class="ruby-identifier">is</span> <span class="ruby-identifier">blocked</span>
+                <span class="ruby-identifier">bindEvents</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">be</span> <span class="ruby-identifier">default</span> <span class="ruby-identifier">blockUI</span> <span class="ruby-identifier">will</span> <span class="ruby-identifier">supress</span> <span class="ruby-identifier">tab</span> <span class="ruby-identifier">navigation</span> <span class="ruby-identifier">from</span> <span class="ruby-identifier">leaving</span> <span class="ruby-identifier">blocking</span> <span class="ruby-identifier">content</span>
+                <span class="ruby-regexp">//</span> (<span class="ruby-keyword">if</span> <span class="ruby-identifier">bindEvents</span> <span class="ruby-identifier">is</span> <span class="ruby-keyword">true</span>)
+                <span class="ruby-identifier">constrainTabKey</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">fadeIn</span> <span class="ruby-identifier">time</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">millis</span>; <span class="ruby-identifier">set</span> <span class="ruby-identifier">to</span> <span class="ruby-value">0</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">disable</span> <span class="ruby-identifier">fadeIn</span> <span class="ruby-identifier">on</span> <span class="ruby-identifier">block</span>
+                <span class="ruby-identifier">fadeIn</span><span class="ruby-operator">:</span>  <span class="ruby-value">200</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">fadeOut</span> <span class="ruby-identifier">time</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">millis</span>; <span class="ruby-identifier">set</span> <span class="ruby-identifier">to</span> <span class="ruby-value">0</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">disable</span> <span class="ruby-identifier">fadeOut</span> <span class="ruby-identifier">on</span> <span class="ruby-identifier">unblock</span>
+                <span class="ruby-identifier">fadeOut</span><span class="ruby-operator">:</span>  <span class="ruby-value">400</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">time</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">millis</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">wait</span> <span class="ruby-identifier">before</span> <span class="ruby-identifier">auto</span><span class="ruby-operator">-</span><span class="ruby-identifier">unblocking</span>; <span class="ruby-identifier">set</span> <span class="ruby-identifier">to</span> <span class="ruby-value">0</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">disable</span> <span class="ruby-identifier">auto</span><span class="ruby-operator">-</span><span class="ruby-identifier">unblock</span>
+                <span class="ruby-identifier">timeout</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">disable</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">you</span> <span class="ruby-identifier">don</span><span class="ruby-string">'t want to show the overlay
+                showOverlay: true,
+
+                // if true, focus will be placed in the first available input field when
+                // page blocking
+                focusInput: true,
+
+                // suppresses the use of overlay styles on FF/Linux (due to performance issues with opacity)
+                // no longer needed in 2012
+                // applyPlatformOpacityRules: true,
+
+                // callback method invoked when fadeIn has completed and blocking message is visible
+                onBlock: null,
+
+                // callback method invoked when unblocking has completed; the callback is
+                // passed the element that has been unblocked (which is the window object for page
+                // blocks) and the options that were passed to the unblock call:
+                //      onUnblock(element, options)
+                onUnblock: null,
+
+                // callback method invoked when the overlay area is clicked.
+                // setting this will turn the cursor to a pointer, otherwise cursor defined in overlayCss will be used.
+                onOverlayClick: null,
+
+                // don'</span><span class="ruby-identifier">t</span> <span class="ruby-identifier">ask</span>; <span class="ruby-keyword">if</span> <span class="ruby-identifier">you</span> <span class="ruby-identifier">really</span> <span class="ruby-identifier">must</span> <span class="ruby-identifier">know</span><span class="ruby-operator">:</span> <span class="ruby-identifier">http</span>:<span class="ruby-operator">/</span><span class="ruby-regexp">/groups.google.com/</span><span class="ruby-identifier">group</span><span class="ruby-operator">/</span><span class="ruby-identifier">jquery</span><span class="ruby-operator">-</span><span class="ruby-identifier">en</span><span class="ruby-operator">/</span><span class="ruby-identifier">browse_thread</span><span class="ruby-operator">/</span><span class="ruby-identifier">thread</span><span class="ruby-operator">/</span><span class="ruby-value">36640</span><span class="ruby-identifier">a8730503595</span><span class="ruby-operator">/</span><span class="ruby-value">2</span><span class="ruby-identifier">f6a79a77a78e493</span><span class="ruby-comment">#2f6a79a77a78e493</span>
+                <span class="ruby-identifier">quirksmodeOffsetHack</span><span class="ruby-operator">:</span> <span class="ruby-value">4</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-keyword">class</span> <span class="ruby-identifier">name</span> <span class="ruby-identifier">of</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">message</span> <span class="ruby-identifier">block</span>
+                <span class="ruby-identifier">blockMsgClass</span><span class="ruby-operator">:</span> <span class="ruby-string">'blockMsg'</span>,
+
+                <span class="ruby-regexp">//</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">it</span> <span class="ruby-identifier">is</span> <span class="ruby-identifier">already</span> <span class="ruby-identifier">blocked</span>, <span class="ruby-keyword">then</span> <span class="ruby-identifier">ignore</span> <span class="ruby-identifier">it</span> (<span class="ruby-identifier">don</span><span class="ruby-string">'t unblock and reblock)
+                ignoreIfBlocked: false
+        };
+
+        // private data and functions follow...
+
+        var pageBlock = null;
+        var pageBlockEls = [];
+
+        function install(el, opts) {
+                var css, themedCSS;
+                var full = (el == window);
+                var msg = (opts &amp;&amp; opts.message !== undefined ? opts.message : undefined);
+                opts = $.extend({}, $.blockUI.defaults, opts || {});
+
+                if (opts.ignoreIfBlocked &amp;&amp; $(el).data('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">isBlocked</span><span class="ruby-string">'))
+                        return;
+
+                opts.overlayCSS = $.extend({}, $.blockUI.defaults.overlayCSS, opts.overlayCSS || {});
+                css = $.extend({}, $.blockUI.defaults.css, opts.css || {});
+                if (opts.onOverlayClick)
+                        opts.overlayCSS.cursor = '</span><span class="ruby-identifier">pointer</span><span class="ruby-string">';
+
+                themedCSS = $.extend({}, $.blockUI.defaults.themedCSS, opts.themedCSS || {});
+                msg = msg === undefined ? opts.message : msg;
+
+                // remove the current block (if there is one)
+                if (full &amp;&amp; pageBlock)
+                        remove(window, {fadeOut:0});
+
+                // if an existing element is being used as the blocking content then we capture
+                // its current place in the DOM (and current display style) so we can restore
+                // it when we unblock
+                if (msg &amp;&amp; typeof msg != '</span><span class="ruby-identifier">string</span><span class="ruby-string">' &amp;&amp; (msg.parentNode || msg.jquery)) {
+                        var node = msg.jquery ? msg[0] : msg;
+                        var data = {};
+                        $(el).data('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">history</span><span class="ruby-string">', data);
+                        data.el = node;
+                        data.parent = node.parentNode;
+                        data.display = node.style.display;
+                        data.position = node.style.position;
+                        if (data.parent)
+                                data.parent.removeChild(node);
+                }
+
+                $(el).data('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">onUnblock</span><span class="ruby-string">', opts.onUnblock);
+                var z = opts.baseZ;
+
+                // blockUI uses 3 layers for blocking, for simplicity they are all used on every platform;
+                // layer1 is the iframe layer which is used to supress bleed through of underlying content
+                // layer2 is the overlay layer which has opacity and a wait cursor (by default)
+                // layer3 is the message content that is displayed while blocking
+                var lyr1, lyr2, lyr3, s;
+                if (msie || opts.forceIframe)
+                        lyr1 = $('</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">iframe</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;blockUI&quot;</span> <span class="ruby-identifier">style</span>=<span class="ruby-string">&quot;z-index:'+ (z++) +';display:none;border:none;margin:0;padding:0;position:absolute;width:100%;height:100%;top:0;left:0&quot;</span> <span class="ruby-identifier">src</span>=<span class="ruby-string">&quot;'+opts.iframeSrc+'&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/iframe&gt;');
+                else
+                        lyr1 = $('&lt;div class=&quot;blockUI&quot; style=&quot;display:none&quot;&gt;&lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span><span class="ruby-string">');
+
+                if (opts.theme)
+                        lyr2 = $('</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">div</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;blockUI blockOverlay ui-widget-overlay&quot;</span> <span class="ruby-identifier">style</span>=<span class="ruby-string">&quot;z-index:'+ (z++) +';display:none&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/div&gt;');
+                else
+                        lyr2 = $('&lt;div class=&quot;blockUI blockOverlay&quot; style=&quot;z-index:'+ (z++) +';display:none;border:none;margin:0;padding:0;width:100%;height:100%;top:0;left:0&quot;&gt;&lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span><span class="ruby-string">');
+
+                if (opts.theme &amp;&amp; full) {
+                        s = '</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">div</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;blockUI ' + opts.blockMsgClass + ' blockPage ui-dialog ui-widget ui-corner-all&quot;</span> <span class="ruby-identifier">style</span>=<span class="ruby-string">&quot;z-index:'+(z+10)+';display:none;position:fixed&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-string">';
+                        if ( opts.title ) {
+                                s += '</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">div</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;ui-widget-header ui-dialog-titlebar ui-corner-all blockTitle&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'+(opts.title || '</span><span class="ruby-operator">&amp;</span><span class="ruby-identifier">nbsp</span>;<span class="ruby-string">')+'</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/div&gt;';
+                        }
+                        s += '&lt;div class=&quot;ui-widget-content ui-dialog-content&quot;&gt;&lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span><span class="ruby-string">';
+                        s += '</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/div&gt;';
+                }
+                else if (opts.theme) {
+                        s = '&lt;div class=&quot;blockUI ' + opts.blockMsgClass + ' blockElement ui-dialog ui-widget ui-corner-all&quot; style=&quot;z-index:'+(z+10)+';display:none;position:absolute&quot;&gt;';
+                        if ( opts.title ) {
+                                s += '&lt;div class=&quot;ui-widget-header ui-dialog-titlebar ui-corner-all blockTitle&quot;&gt;'+(opts.title || '&amp;nbsp;')+'&lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span><span class="ruby-string">';
+                        }  
+                        s += '</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">div</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;ui-widget-content ui-dialog-content&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/div&gt;';
+                        s += '&lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span><span class="ruby-string">';
+                }
+                else if (full) {
+                        s = '</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">div</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;blockUI ' + opts.blockMsgClass + ' blockPage&quot;</span> <span class="ruby-identifier">style</span>=<span class="ruby-string">&quot;z-index:'+(z+10)+';display:none;position:fixed&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/div&gt;';
+                }
+                else {
+                        s = '&lt;div class=&quot;blockUI ' + opts.blockMsgClass + ' blockElement&quot; style=&quot;z-index:'+(z+10)+';display:none;position:absolute&quot;&gt;&lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span><span class="ruby-string">';
+                }
+                lyr3 = $(s);
+
+                // if we have a message, style it
+                if (msg) {
+                        if (opts.theme) {
+                                lyr3.css(themedCSS);
+                                lyr3.addClass('</span><span class="ruby-identifier">ui</span><span class="ruby-operator">-</span><span class="ruby-identifier">widget</span><span class="ruby-operator">-</span><span class="ruby-identifier">content</span><span class="ruby-string">');
+                        }
+                        else
+                                lyr3.css(css);
+                }
+
+                // style the overlay
+                if (!opts.theme /*&amp;&amp; (!opts.applyPlatformOpacityRules)*/)
+                        lyr2.css(opts.overlayCSS);
+                lyr2.css('</span><span class="ruby-identifier">position</span><span class="ruby-string">', full ? '</span><span class="ruby-identifier">fixed</span><span class="ruby-string">' : '</span><span class="ruby-identifier">absolute</span><span class="ruby-string">');
+
+                // make iframe layer transparent in IE
+                if (msie || opts.forceIframe)
+                        lyr1.css('</span><span class="ruby-identifier">opacity</span><span class="ruby-string">',0.0);
+
+                //$([lyr1[0],lyr2[0],lyr3[0]]).appendTo(full ? '</span><span class="ruby-identifier">body</span><span class="ruby-string">' : el);
+                var layers = [lyr1,lyr2,lyr3], $par = full ? $('</span><span class="ruby-identifier">body</span><span class="ruby-string">') : $(el);
+                $.each(layers, function() {
+                        this.appendTo($par);
+                });
+
+                if (opts.theme &amp;&amp; opts.draggable &amp;&amp; $.fn.draggable) {
+                        lyr3.draggable({
+                                handle: '</span>.<span class="ruby-identifier">ui</span><span class="ruby-operator">-</span><span class="ruby-identifier">dialog</span><span class="ruby-operator">-</span><span class="ruby-identifier">titlebar</span><span class="ruby-string">',
+                                cancel: '</span><span class="ruby-identifier">li</span><span class="ruby-string">'
+                        });
+                }
+
+                // ie7 must use absolute positioning in quirks mode and to account for activex issues (when scrolling)
+                var expr = setExpr &amp;&amp; (!$.support.boxModel || $('</span><span class="ruby-identifier">object</span>,<span class="ruby-identifier">embed</span><span class="ruby-string">', full ? null : el).length &gt; 0);
+                if (ie6 || expr) {
+                        // give body 100% height
+                        if (full &amp;&amp; opts.allowBodyStretch &amp;&amp; $.support.boxModel)
+                                $('</span><span class="ruby-identifier">html</span>,<span class="ruby-identifier">body</span><span class="ruby-string">').css('</span><span class="ruby-identifier">height</span><span class="ruby-string">','</span><span class="ruby-value">100</span><span class="ruby-operator">%</span><span class="ruby-string">');
+
+                        // fix ie6 issue when blocked element has a border width
+                        if ((ie6 || !$.support.boxModel) &amp;&amp; !full) {
+                                var t = sz(el,'</span><span class="ruby-identifier">borderTopWidth</span><span class="ruby-string">'), l = sz(el,'</span><span class="ruby-identifier">borderLeftWidth</span><span class="ruby-string">');
+                                var fixT = t ? '</span>(<span class="ruby-value">0</span> <span class="ruby-operator">-</span> <span class="ruby-string">'+t+'</span>)<span class="ruby-string">' : 0;
+                                var fixL = l ? '</span>(<span class="ruby-value">0</span> <span class="ruby-operator">-</span> <span class="ruby-string">'+l+'</span>)<span class="ruby-string">' : 0;
+                        }
+
+                        // simulate fixed position
+                        $.each(layers, function(i,o) {
+                                var s = o[0].style;
+                                s.position = '</span><span class="ruby-identifier">absolute</span><span class="ruby-string">';
+                                if (i &lt; 2) {
+                                        if (full)
+                                                s.setExpression('</span><span class="ruby-identifier">height</span><span class="ruby-string">','</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">max</span>(<span class="ruby-identifier">document</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">scrollHeight</span>, <span class="ruby-identifier">document</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">offsetHeight</span>) <span class="ruby-operator">-</span> (<span class="ruby-identifier">jQuery</span>.<span class="ruby-identifier">support</span>.<span class="ruby-identifier">boxModel?</span><span class="ruby-value">0</span><span class="ruby-operator">:</span><span class="ruby-string">'+opts.quirksmodeOffsetHack+'</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;px&quot;</span><span class="ruby-string">');
+                                        else
+                                                s.setExpression('</span><span class="ruby-identifier">height</span><span class="ruby-string">','</span><span class="ruby-identifier">this</span>.<span class="ruby-identifier">parentNode</span>.<span class="ruby-identifier">offsetHeight</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;px&quot;</span><span class="ruby-string">');
+                                        if (full)
+                                                s.setExpression('</span><span class="ruby-identifier">width</span><span class="ruby-string">','</span><span class="ruby-identifier">jQuery</span>.<span class="ruby-identifier">support</span>.<span class="ruby-identifier">boxModel</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">documentElement</span>.<span class="ruby-identifier">clientWidth</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">clientWidth</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;px&quot;</span><span class="ruby-string">');
+                                        else
+                                                s.setExpression('</span><span class="ruby-identifier">width</span><span class="ruby-string">','</span><span class="ruby-identifier">this</span>.<span class="ruby-identifier">parentNode</span>.<span class="ruby-identifier">offsetWidth</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;px&quot;</span><span class="ruby-string">');
+                                        if (fixL) s.setExpression('</span><span class="ruby-identifier">left</span><span class="ruby-string">', fixL);
+                                        if (fixT) s.setExpression('</span><span class="ruby-identifier">top</span><span class="ruby-string">', fixT);
+                                }
+                                else if (opts.centerY) {
+                                        if (full) s.setExpression('</span><span class="ruby-identifier">top</span><span class="ruby-string">','</span>(<span class="ruby-identifier">document</span>.<span class="ruby-identifier">documentElement</span>.<span class="ruby-identifier">clientHeight</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">clientHeight</span>) <span class="ruby-operator">/</span> <span class="ruby-value">2</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">this</span>.<span class="ruby-identifier">offsetHeight</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>) <span class="ruby-operator">+</span> (<span class="ruby-identifier">blah</span> = <span class="ruby-identifier">document</span>.<span class="ruby-identifier">documentElement</span>.<span class="ruby-identifier">scrollTop</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">documentElement</span>.<span class="ruby-identifier">scrollTop</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">scrollTop</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;px&quot;</span><span class="ruby-string">');
+                                        s.marginTop = 0;
+                                }
+                                else if (!opts.centerY &amp;&amp; full) {
+                                        var top = (opts.css &amp;&amp; opts.css.top) ? parseInt(opts.css.top, 10) : 0;
+                                        var expression = '</span>((<span class="ruby-identifier">document</span>.<span class="ruby-identifier">documentElement</span>.<span class="ruby-identifier">scrollTop</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">documentElement</span>.<span class="ruby-identifier">scrollTop</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">scrollTop</span>) <span class="ruby-operator">+</span> <span class="ruby-string">'+top+'</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;px&quot;</span><span class="ruby-string">';
+                                        s.setExpression('</span><span class="ruby-identifier">top</span><span class="ruby-string">',expression);
+                                }
+                        });
+                }
+
+                // show the message
+                if (msg) {
+                        if (opts.theme)
+                                lyr3.find('</span>.<span class="ruby-identifier">ui</span><span class="ruby-operator">-</span><span class="ruby-identifier">widget</span><span class="ruby-operator">-</span><span class="ruby-identifier">content</span><span class="ruby-string">').append(msg);
+                        else
+                                lyr3.append(msg);
+                        if (msg.jquery || msg.nodeType)
+                                $(msg).show();
+                }
+
+                if ((msie || opts.forceIframe) &amp;&amp; opts.showOverlay)
+                        lyr1.show(); // opacity is zero
+                if (opts.fadeIn) {
+                        var cb = opts.onBlock ? opts.onBlock : noOp;
+                        var cb1 = (opts.showOverlay &amp;&amp; !msg) ? cb : noOp;
+                        var cb2 = msg ? cb : noOp;
+                        if (opts.showOverlay)
+                                lyr2._fadeIn(opts.fadeIn, cb1);
+                        if (msg)
+                                lyr3._fadeIn(opts.fadeIn, cb2);
+                }
+                else {
+                        if (opts.showOverlay)
+                                lyr2.show();
+                        if (msg)
+                                lyr3.show();
+                        if (opts.onBlock)
+                                opts.onBlock();
+                }
+
+                // bind key and mouse events
+                bind(1, el, opts);
+
+                if (full) {
+                        pageBlock = lyr3[0];
+                        pageBlockEls = $('</span><span class="ruby-operator">:</span><span class="ruby-identifier">input</span>:<span class="ruby-identifier">enabled</span><span class="ruby-operator">:</span><span class="ruby-identifier">visible</span><span class="ruby-string">',pageBlock);
+                        if (opts.focusInput)
+                                setTimeout(focus, 20);
+                }
+                else
+                        center(lyr3[0], opts.centerX, opts.centerY);
+
+                if (opts.timeout) {
+                        // auto-unblock
+                        var to = setTimeout(function() {
+                                if (full)
+                                        $.unblockUI(opts);
+                                else
+                                        $(el).unblock(opts);
+                        }, opts.timeout);
+                        $(el).data('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">timeout</span><span class="ruby-string">', to);
+                }
+        }
+
+        // remove the block
+        function remove(el, opts) {
+                var full = (el == window);
+                var $el = $(el);
+                var data = $el.data('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">history</span><span class="ruby-string">');
+                var to = $el.data('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">timeout</span><span class="ruby-string">');
+                if (to) {
+                        clearTimeout(to);
+                        $el.removeData('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">timeout</span><span class="ruby-string">');
+                }
+                opts = $.extend({}, $.blockUI.defaults, opts || {});
+                bind(0, el, opts); // unbind events
+
+                if (opts.onUnblock === null) {
+                        opts.onUnblock = $el.data('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">onUnblock</span><span class="ruby-string">');
+                        $el.removeData('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">onUnblock</span><span class="ruby-string">');
+                }
+
+                var els;
+                if (full) // crazy selector to handle odd field errors in ie6/7
+                        els = $('</span><span class="ruby-identifier">body</span><span class="ruby-string">').children().filter('</span>.<span class="ruby-identifier">blockUI</span><span class="ruby-string">').add('</span><span class="ruby-identifier">body</span> <span class="ruby-operator">&gt;</span> .<span class="ruby-identifier">blockUI</span><span class="ruby-string">');
+                else
+                        els = $el.find('</span><span class="ruby-operator">&gt;</span>.<span class="ruby-identifier">blockUI</span><span class="ruby-string">');
+
+                // fix cursor issue
+                if ( opts.cursorReset ) {
+                        if ( els.length &gt; 1 )
+                                els[1].style.cursor = opts.cursorReset;
+                        if ( els.length &gt; 2 )
+                                els[2].style.cursor = opts.cursorReset;
+                }
+
+                if (full)
+                        pageBlock = pageBlockEls = null;
+
+                if (opts.fadeOut) {
+                        els.fadeOut(opts.fadeOut);
+                        setTimeout(function() { reset(els,data,opts,el); }, opts.fadeOut);
+                }
+                else
+                        reset(els, data, opts, el);
+        }
+
+        // move blocking element back into the DOM where it started
+        function reset(els,data,opts,el) {
+                var $el = $(el);
+                els.each(function(i,o) {
+                        // remove via DOM calls so we don'</span><span class="ruby-identifier">t</span> <span class="ruby-identifier">lose</span> <span class="ruby-identifier">event</span> <span class="ruby-identifier">handlers</span>
+                        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">this</span>.<span class="ruby-identifier">parentNode</span>)
+                                <span class="ruby-identifier">this</span>.<span class="ruby-identifier">parentNode</span>.<span class="ruby-identifier">removeChild</span>(<span class="ruby-identifier">this</span>);
+                });
+
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">data</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">el</span>) {
+                        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">el</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">display</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">display</span>;
+                        <span class="ruby-identifier">data</span>.<span class="ruby-identifier">el</span>.<span class="ruby-identifier">style</span>.<span class="ruby-identifier">position</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">position</span>;
+                        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">data</span>.<span class="ruby-identifier">parent</span>)
+                                <span class="ruby-identifier">data</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">appendChild</span>(<span class="ruby-identifier">data</span>.<span class="ruby-identifier">el</span>);
+                        <span class="ruby-identifier">$el</span>.<span class="ruby-identifier">removeData</span>(<span class="ruby-string">'blockUI.history'</span>);
+                }
+
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">$el</span>.<span class="ruby-identifier">data</span>(<span class="ruby-string">'blockUI.static'</span>)) {
+                        <span class="ruby-identifier">$el</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">'position'</span>, <span class="ruby-string">'static'</span>); <span class="ruby-regexp">//</span> <span class="ruby-comment">#22</span>
+                }
+
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">typeof</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">onUnblock</span> <span class="ruby-operator">==</span> <span class="ruby-string">'function'</span>)
+                        <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">onUnblock</span>(<span class="ruby-identifier">el</span>,<span class="ruby-identifier">opts</span>);
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">fix</span> <span class="ruby-identifier">issue</span> <span class="ruby-keyword">in</span> <span class="ruby-constant">Safari</span> <span class="ruby-value">6</span> <span class="ruby-identifier">where</span> <span class="ruby-identifier">block</span> <span class="ruby-identifier">artifacts</span> <span class="ruby-identifier">remain</span> <span class="ruby-keyword">until</span> <span class="ruby-identifier">reflow</span>
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">body</span> = $(<span class="ruby-identifier">document</span>.<span class="ruby-identifier">body</span>), <span class="ruby-identifier">w</span> = <span class="ruby-identifier">body</span>.<span class="ruby-identifier">width</span>(), <span class="ruby-identifier">cssW</span> = <span class="ruby-identifier">body</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">style</span>.<span class="ruby-identifier">width</span>;
+                <span class="ruby-identifier">body</span>.<span class="ruby-identifier">width</span>(<span class="ruby-identifier">w</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">width</span>(<span class="ruby-identifier">w</span>);
+                <span class="ruby-identifier">body</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">style</span>.<span class="ruby-identifier">width</span> = <span class="ruby-identifier">cssW</span>;
+        }
+
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">bind</span><span class="ruby-operator">/</span><span class="ruby-identifier">unbind</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">handler</span>
+        <span class="ruby-identifier">function</span> <span class="ruby-identifier">bind</span>(<span class="ruby-identifier">b</span>, <span class="ruby-identifier">el</span>, <span class="ruby-identifier">opts</span>) {
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">full</span> = <span class="ruby-identifier">el</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">window</span>, <span class="ruby-identifier">$el</span> = $(<span class="ruby-identifier">el</span>);
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">don</span><span class="ruby-string">'t bother unbinding if there is nothing to unbind
+                if (!b &amp;&amp; (full &amp;&amp; !pageBlock || !full &amp;&amp; !$el.data('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">isBlocked</span><span class="ruby-string">')))
+                        return;
+
+                $el.data('</span><span class="ruby-identifier">blockUI</span>.<span class="ruby-identifier">isBlocked</span><span class="ruby-string">', b);
+
+                // don'</span><span class="ruby-identifier">t</span> <span class="ruby-identifier">bind</span> <span class="ruby-identifier">events</span> <span class="ruby-keyword">when</span> <span class="ruby-identifier">overlay</span> <span class="ruby-identifier">is</span> <span class="ruby-keyword">not</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">use</span> <span class="ruby-keyword">or</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">bindEvents</span> <span class="ruby-identifier">is</span> <span class="ruby-keyword">false</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">opts</span>.<span class="ruby-identifier">bindEvents</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">b</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">opts</span>.<span class="ruby-identifier">showOverlay</span>))
+                        <span class="ruby-keyword">return</span>;
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">bind</span> <span class="ruby-identifier">anchors</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">inputs</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">mouse</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">key</span> <span class="ruby-identifier">events</span>
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">events</span> = <span class="ruby-string">'mousedown mouseup keydown keypress keyup touchstart touchend touchmove'</span>;
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">b</span>)
+                        $(<span class="ruby-identifier">document</span>).<span class="ruby-identifier">bind</span>(<span class="ruby-identifier">events</span>, <span class="ruby-identifier">opts</span>, <span class="ruby-identifier">handler</span>);
+                <span class="ruby-keyword">else</span>
+                        $(<span class="ruby-identifier">document</span>).<span class="ruby-identifier">unbind</span>(<span class="ruby-identifier">events</span>, <span class="ruby-identifier">handler</span>);
+
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">former</span> <span class="ruby-identifier">impl</span><span class="ruby-operator">...</span>
+        <span class="ruby-regexp">//</span>              <span class="ruby-identifier">var</span> <span class="ruby-identifier">$e</span> = $(<span class="ruby-string">'a,:input'</span>);
+        <span class="ruby-regexp">//</span>              <span class="ruby-identifier">b</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">$e</span>.<span class="ruby-identifier">bind</span>(<span class="ruby-identifier">events</span>, <span class="ruby-identifier">opts</span>, <span class="ruby-identifier">handler</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">$e</span>.<span class="ruby-identifier">unbind</span>(<span class="ruby-identifier">events</span>, <span class="ruby-identifier">handler</span>);
+        }
+
+        <span class="ruby-regexp">//</span> <span class="ruby-identifier">event</span> <span class="ruby-identifier">handler</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">suppress</span> <span class="ruby-identifier">keyboard</span><span class="ruby-operator">/</span><span class="ruby-identifier">mouse</span> <span class="ruby-identifier">events</span> <span class="ruby-keyword">when</span> <span class="ruby-identifier">blocking</span>
+        <span class="ruby-identifier">function</span> <span class="ruby-identifier">handler</span>(<span class="ruby-identifier">e</span>) {
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">allow</span> <span class="ruby-identifier">tab</span> <span class="ruby-identifier">navigation</span> (<span class="ruby-identifier">conditionally</span>)
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">e</span>.<span class="ruby-identifier">keyCode</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">keyCode</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>) {
+                        <span class="ruby-keyword">if</span> (<span class="ruby-identifier">pageBlock</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">constrainTabKey</span>) {
+                                <span class="ruby-identifier">var</span> <span class="ruby-identifier">els</span> = <span class="ruby-identifier">pageBlockEls</span>;
+                                <span class="ruby-identifier">var</span> <span class="ruby-identifier">fwd</span> = <span class="ruby-operator">!</span><span class="ruby-identifier">e</span>.<span class="ruby-identifier">shiftKey</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">target</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">els</span>[<span class="ruby-identifier">els</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>];
+                                <span class="ruby-identifier">var</span> <span class="ruby-identifier">back</span> = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">shiftKey</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">target</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">els</span>[<span class="ruby-value">0</span>];
+                                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">fwd</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">back</span>) {
+                                        <span class="ruby-identifier">setTimeout</span>(<span class="ruby-identifier">function</span>(){<span class="ruby-identifier">focus</span>(<span class="ruby-identifier">back</span>);},<span class="ruby-value">10</span>);
+                                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>;
+                                }
+                        }
+                }
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">data</span>;
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">target</span> = $(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">target</span>);
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">target</span>.<span class="ruby-identifier">hasClass</span>(<span class="ruby-string">'blockOverlay'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">onOverlayClick</span>)
+                        <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">onOverlayClick</span>();
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">allow</span> <span class="ruby-identifier">events</span> <span class="ruby-identifier">within</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">message</span> <span class="ruby-identifier">content</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">target</span>.<span class="ruby-identifier">parents</span>(<span class="ruby-string">'div.'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">blockMsgClass</span>).<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>;
+
+                <span class="ruby-regexp">//</span> <span class="ruby-identifier">allow</span> <span class="ruby-identifier">events</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">content</span> <span class="ruby-identifier">that</span> <span class="ruby-identifier">is</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">being</span> <span class="ruby-identifier">blocked</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">parents</span>().<span class="ruby-identifier">children</span>().<span class="ruby-identifier">filter</span>(<span class="ruby-string">'div.blockUI'</span>).<span class="ruby-identifier">length</span> <span class="ruby-operator">===</span> <span class="ruby-value">0</span>;
+        }
+
+        <span class="ruby-identifier">function</span> <span class="ruby-identifier">focus</span>(<span class="ruby-identifier">back</span>) {
+                <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">pageBlockEls</span>)
+                        <span class="ruby-keyword">return</span>;
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">e</span> = <span class="ruby-identifier">pageBlockEls</span>[<span class="ruby-identifier">back</span><span class="ruby-operator">===</span><span class="ruby-keyword">true</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">pageBlockEls</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>];
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">e</span>)
+                        <span class="ruby-identifier">e</span>.<span class="ruby-identifier">focus</span>();
+        }
+
+        <span class="ruby-identifier">function</span> <span class="ruby-identifier">center</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>) {
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">p</span> = <span class="ruby-identifier">el</span>.<span class="ruby-identifier">parentNode</span>, <span class="ruby-identifier">s</span> = <span class="ruby-identifier">el</span>.<span class="ruby-identifier">style</span>;
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">l</span> = ((<span class="ruby-identifier">p</span>.<span class="ruby-identifier">offsetWidth</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">offsetWidth</span>)<span class="ruby-operator">/</span><span class="ruby-value">2</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">sz</span>(<span class="ruby-identifier">p</span>,<span class="ruby-string">'borderLeftWidth'</span>);
+                <span class="ruby-identifier">var</span> <span class="ruby-identifier">t</span> = ((<span class="ruby-identifier">p</span>.<span class="ruby-identifier">offsetHeight</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">el</span>.<span class="ruby-identifier">offsetHeight</span>)<span class="ruby-operator">/</span><span class="ruby-value">2</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">sz</span>(<span class="ruby-identifier">p</span>,<span class="ruby-string">'borderTopWidth'</span>);
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">x</span>) <span class="ruby-identifier">s</span>.<span class="ruby-identifier">left</span> = <span class="ruby-identifier">l</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> (<span class="ruby-identifier">l</span><span class="ruby-operator">+</span><span class="ruby-string">'px'</span>) <span class="ruby-operator">:</span> <span class="ruby-string">'0'</span>;
+                <span class="ruby-keyword">if</span> (<span class="ruby-identifier">y</span>) <span class="ruby-identifier">s</span>.<span class="ruby-identifier">top</span>  = <span class="ruby-identifier">t</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> (<span class="ruby-identifier">t</span><span class="ruby-operator">+</span><span class="ruby-string">'px'</span>) <span class="ruby-operator">:</span> <span class="ruby-string">'0'</span>;
+        }
+
+        <span class="ruby-identifier">function</span> <span class="ruby-identifier">sz</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">p</span>) {
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">parseInt</span>(<span class="ruby-identifier">$.</span><span class="ruby-identifier">css</span>(<span class="ruby-identifier">el</span>,<span class="ruby-identifier">p</span>),<span class="ruby-value">10</span>)<span class="ruby-operator">||</span><span class="ruby-value">0</span>;
+        }
+
+}
+
+<span class="ruby-regexp">/*global define:true */</span>
+<span class="ruby-keyword">if</span> (<span class="ruby-identifier">typeof</span> <span class="ruby-identifier">define</span> <span class="ruby-operator">===</span> <span class="ruby-string">'function'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">define</span>.<span class="ruby-identifier">amd</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">define</span>.<span class="ruby-identifier">amd</span>.<span class="ruby-identifier">jQuery</span>) {
+        <span class="ruby-identifier">define</span>([<span class="ruby-string">'jquery'</span>], <span class="ruby-identifier">setup</span>);
+} <span class="ruby-keyword">else</span> {
+        <span class="ruby-identifier">setup</span>(<span class="ruby-identifier">jQuery</span>);
+}
+</pre>
+
+<p>})();</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

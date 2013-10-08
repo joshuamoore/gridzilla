@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>gridzilla.sass - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../../../index.html">Home</a>
+    <a href="../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+<div id="table-of-contents">
+  <nav class="section">
+    <h3 class="section-header">Table of Contents</h3>
+    <ul>
+      <li><a href="#label-gradient%28%24from%2C+%24to%29">gradient($from, $to)</a>
+      <li><a href="#label-transition%28%24property%2C+%24duration%2C+%24function%29">transition($property, $duration, $function)</a>
+    </ul>
+  </nav>
+</div>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../../../CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li class="file"><a href="../../../../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="../../../../MIT-LICENSE.html">MIT-LICENSE</a>
+  
+    <li class="file"><a href="../../../../README_md.html">README</a>
+  
+    <li class="file"><a href="../../../../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../../../../doc/ActionController_html.html">ActionController.html</a>
+  
+    <li class="file"><a href="../../../../doc/ActionView_html.html">ActionView.html</a>
+  
+    <li class="file"><a href="../../../../doc/BlankSlate_html.html">BlankSlate.html</a>
+  
+    <li class="file"><a href="../../../../doc/CHANGELOG_md_html.html">CHANGELOG_md.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla_html.html">Gridzilla.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Controller_html.html">Controller.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Controller/ClassMethods_html.html">ClassMethods.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Controller/GridBuilder_html.html">GridBuilder.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Css_html.html">Css.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Generators_html.html">Generators.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Generators/InstallGenerator_html.html">InstallGenerator.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Gobbler_html.html">Gobbler.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/Message_html.html">Message.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/PaginationLinkRenderer_html.html">PaginationLinkRenderer.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View_html.html">View.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View/AjaxGrid_html.html">AjaxGrid.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View/Grid_html.html">Grid.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View/InstanceMethods_html.html">InstanceMethods.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View/Panel_html.html">Panel.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/View/Row_html.html">Row.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/ViewDsl_html.html">ViewDsl.html</a>
+  
+    <li class="file"><a href="../../../../doc/Gridzilla/ViewDsl/Base_html.html">Base.html</a>
+  
+    <li class="file"><a href="../../../../doc/GridzillaTest_html.html">GridzillaTest.html</a>
+  
+    <li class="file"><a href="../../../../doc/Kernel_html.html">Kernel.html</a>
+  
+    <li class="file"><a href="../../../../doc/MIT-LICENSE_html.html">MIT-LICENSE.html</a>
+  
+    <li class="file"><a href="../../../../doc/Mime_html.html">Mime.html</a>
+  
+    <li class="file"><a href="../../../../doc/Module_html.html">Module.html</a>
+  
+    <li class="file"><a href="../../../../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../../../../doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="../../../../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../../../../doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="../../../../doc/Symbol_html.html">Symbol.html</a>
+  
+    <li class="file"><a href="../../../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../../../../doc/gridzilla_gemspec_html.html">gridzilla_gemspec.html</a>
+  
+    <li class="file"><a href="../../../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../../../../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../../../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../../../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../../../../doc/lib/generators/gridzilla/javascripts/jquery_blockUI_js_html.html">jquery_blockUI_js.html</a>
+  
+    <li class="file"><a href="../../../../doc/lib/generators/gridzilla/stylesheets/gridzilla_sass_html.html">gridzilla_sass.html</a>
+  
+    <li class="file"><a href="../../../../doc/lib/tasks/install_rake_html.html">install_rake.html</a>
+  
+    <li class="file"><a href="../../../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../../../../gridzilla_gemspec.html">gridzilla.gemspec</a>
+  
+    <li class="file"><a href="../../../../lib/generators/gridzilla/javascripts/jquery_blockUI_js.html">jquery.blockUI.js</a>
+  
+    <li class="file"><a href="../../../../lib/generators/gridzilla/stylesheets/gridzilla_sass.html">gridzilla.sass</a>
+  
+    <li class="file"><a href="../../../../lib/tasks/install_rake.html">install.rake</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../../ActionController.html">ActionController</a>
+  
+    <li><a href="../../../../ActionView.html">ActionView</a>
+  
+    <li><a href="../../../../BlankSlate.html">BlankSlate</a>
+  
+    <li><a href="../../../../BlankSlate.html">BlankSlate</a>
+  
+    <li><a href="../../../../Gridzilla.html">Gridzilla</a>
+  
+    <li><a href="../../../../Gridzilla/Controller.html">Gridzilla::Controller</a>
+  
+    <li><a href="../../../../Gridzilla/Controller/ClassMethods.html">Gridzilla::Controller::ClassMethods</a>
+  
+    <li><a href="../../../../Gridzilla/Controller/GridBuilder.html">Gridzilla::Controller::GridBuilder</a>
+  
+    <li><a href="../../../../Gridzilla/Css.html">Gridzilla::Css</a>
+  
+    <li><a href="../../../../Gridzilla/Generators.html">Gridzilla::Generators</a>
+  
+    <li><a href="../../../../Gridzilla/Generators/InstallGenerator.html">Gridzilla::Generators::InstallGenerator</a>
+  
+    <li><a href="../../../../Gridzilla/Gobbler.html">Gridzilla::Gobbler</a>
+  
+    <li><a href="../../../../Gridzilla/Message.html">Gridzilla::Message</a>
+  
+    <li><a href="../../../../Gridzilla/PaginationLinkRenderer.html">Gridzilla::PaginationLinkRenderer</a>
+  
+    <li><a href="../../../../Gridzilla/View.html">Gridzilla::View</a>
+  
+    <li><a href="../../../../Gridzilla/View/AjaxGrid.html">Gridzilla::View::AjaxGrid</a>
+  
+    <li><a href="../../../../Gridzilla/View/Grid.html">Gridzilla::View::Grid</a>
+  
+    <li><a href="../../../../Gridzilla/View/InstanceMethods.html">Gridzilla::View::InstanceMethods</a>
+  
+    <li><a href="../../../../Gridzilla/View/Panel.html">Gridzilla::View::Panel</a>
+  
+    <li><a href="../../../../Gridzilla/View/Row.html">Gridzilla::View::Row</a>
+  
+    <li><a href="../../../../Gridzilla/ViewDsl.html">Gridzilla::ViewDsl</a>
+  
+    <li><a href="../../../../Gridzilla/ViewDsl/Base.html">Gridzilla::ViewDsl::Base</a>
+  
+    <li><a href="../../../../GridzillaTest.html">GridzillaTest</a>
+  
+    <li><a href="../../../../Kernel.html">Kernel</a>
+  
+    <li><a href="../../../../Mime.html">Mime</a>
+  
+    <li><a href="../../../../Module.html">Module</a>
+  
+    <li><a href="../../../../Object.html">Object</a>
+  
+    <li><a href="../../../../String.html">String</a>
+  
+    <li><a href="../../../../Symbol.html">Symbol</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>$radius: 4px</p>
+
+<h1 id="label-gradient%28%24from%2C+%24to%29">gradient($from, $to)<span><a href="#label-gradient%28%24from%2C+%24to%29">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<pre>   fallback/image non-cover color   
+background-color: $from
+   Firefox 3.6+   
+background-image: -moz-linear-gradient($from, $to)
+/* Safari 4+, Chrome 1+ */
+background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to))
+/* Safari 5.1+, Chrome 10+ */
+background-image: -webkit-linear-gradient($from, $to)
+/* Opera 11.10+ */
+background-image: -o-linear-gradient($from, $to)</pre>
+
+<h1 id="label-transition%28%24property%2C+%24duration%2C+%24function%29">transition($property, $duration, $function)<span><a href="#label-transition%28%24property%2C+%24duration%2C+%24function%29">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<pre>-webkit-transition: ($property $duration $function)
+-moz-transition: ($property $duration $function)
+-ms-transition: ($property $duration $function)
+-o-transition: ($property $duration $function)
+transition: ($property $duration $function)</pre>
+
+<p>@mixin table_header_column_styles</p>
+
+<pre>tr
+  +gradient(#999, #777)
+th
+  :font-size .9em
+  :letter-spacing -0.3px
+  :padding 5px 4px 5px 4px
+  :color #eee
+  :text-transform uppercase
+  :text-shadow 1px 1px 0px #555
+  :width 12px
+  &amp;.green, &amp;.red, &amp;.yellow
+    :background none
+  &amp;.checkbox
+    :padding-left 4px
+  &amp;.center
+    :text-align center
+  &amp;.left
+    :text-align left
+  &amp;.right
+    :text-align right
+  &amp;.gz_sortable
+    :background url(/assets/gridzilla/sort.gif) 100% 50% no-repeat
+    :padding-right 15px
+    :cursor pointer
+  &amp;.gz_sort_asc, &amp;.gz_sort_desc
+    :background-color #777
+    :color #fff
+  &amp;.gz_sort_asc
+    :background-image url(/assets/gridzilla/asc.gif)
+  &amp;.gz_sort_desc
+    :background-image url(/assets/gridzilla/desc.gif)
+  &amp;:hover
+    :background #666
+    +transition( all, .2s, ease)</pre>
+
+<p>//Generalize the checkbox selection. .gridzilla</p>
+
+<pre>.gz_checkbox
+  :width 12px
+  :height 12px
+  :background transparent url(/assets/gridzilla/checkboxes.gif) 0 0 no-repeat
+.gz_radio_button
+  :width 12px
+  :height 12px
+  :background transparent url(/assets/gridzilla/radiobuttons.png) 0 0 no-repeat
+&amp;.ui-selected
+  .gz_checkbox
+    :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -12px no-repeat
+  .gz_radio_button
+    :background transparent url(/assets/gridzilla/radiobuttons.png) 0 -12px no-repeat
+&amp;.ui-partial
+  .gz_checkbox
+    :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -24px no-repeat
+&amp;.ui-selecting
+  .gz_checkbox
+    :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -36px no-repeat
+  .gz_radio_button
+    :background transparent url(/assets/gridzilla/radiobuttons.png) 0 -24px no-repeat</pre>
+
+<p>// Development Mode ////////////////////////////////////// a.reload_link</p>
+
+<pre>:font-size 10px
+:font-weight bold
+:display inline-block
+:background url(/assets/gridzilla/reload_icon.png) 0 0 no-repeat
+:padding 0px 0 3px 18px
+:color #444</pre>
+
+<p>.gridzilla</p>
+
+<pre>.gz_table
+  :width 100%
+  :border-collapse separate
+  :-webkit-border-radius $radius
+  :border-radius $radius
+  :border 1px solid #ccc
+  th,td
+    :border-right 1px solid #CBCBCB
+    :width 12px
+  tr
+    .gz_checkbox
+      :width 12px
+      :height 12px
+      :background transparent url(/assets/gridzilla/checkboxes.gif) 0 0 no-repeat
+    .gz_radio_button
+      :width 12px
+      :height 12px
+      :background transparent url(/assets/gridzilla/radiobuttons.png) 0 0 no-repeat
+    &amp;.ui-selected
+      .gz_checkbox
+        :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -12px no-repeat
+      .gz_radio_button
+        :background transparent url(/assets/gridzilla/radiobuttons.png) 0 -12px no-repeat
+    &amp;.ui-partial
+      .gz_checkbox
+        :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -24px no-repeat
+    &amp;.ui-selecting
+      .gz_checkbox
+        :background transparent url(/assets/gridzilla/checkboxes.gif) 0 -36px no-repeat
+      .gz_radio_button
+        :background transparent url(/assets/gridzilla/radiobuttons.png) 0 -24px no-repeat
+    &amp;.gz_highlight_row
+      :background-color #faf37b
+  thead
+    @include table_header_column_styles
+  tbody
+    tr
+      +gradient(#fff, #f4f4f4)
+      &amp;.alt
+        +gradient(#f4f4f4, #efefef)
+      &amp;.over
+        :background #ddd
+        +transition(all, .15s, ease)
+        color: #000
+      &amp;.ui-selected
+        +gradient(#85b9cb, #5792ae)
+        :color #fff
+        a 
+          :color #fff
+      &amp;.ui-selecting
+        :background #FEEA70
+    td
+      :height 20px
+      :padding 5px 4px 5px 4px
+      &amp;.checkbox
+        :padding-left 4px
+      &amp;.at_risk
+        :background #DB3324
+        :color #FFF
+      input[type=&quot;radio&quot;], input[type=&quot;checkbox&quot;]
+        :float none
+        :margin 0
+    .c
+      :text-align center
+    .l
+      :text-align left
+    .r
+      :text-align right
+    .yes, .green
+      :border 1px dotted #A0B676
+    .yellow
+    .link_list
+      ul
+        :margin-left 0
+        li
+          :padding 4px 2px
+          :font-size 12px
+          a
+            :color #1E57B1
+            :text-decoration underline
+          a:hover
+            :text-decoration none
+
+  tr
+    td.accepts_color
+      :background inherit
+
+    &amp;.puts_green
+      .accepts_color, .accepts_green
+    &amp;.puts_red
+      .accepts_color, .accepts_red
+    &amp;.puts_yellow
+      .accepts_color, .accepts_yellow
+
+.fht_fixed_header
+  :border-bottom 1px solid gray
+  :background #bbb
+  thead
+    @include table_header_column_styles
+
+.fht_table_body    
+  table.gz_table
+    tbody
+      tr
+        td.accept_color
+        :width 25px  
+table.gz_table tbody tr td.accept_color
+  :width 25px
+h4
+  :font-size 1em
+  :padding 10px 0 3px 2px
+  :margin-bottom 2px
+  :font-weight bold
+  :color #999
+  :letter-spacing -0.2px
+  :text-transform uppercase
+  span
+    :font-size 75%
+    :font-weight normal
+    :color #000
+.gz_panel
+  :margin 0px 0px 2px 2px
+  :padding 3px 0 0px 0
+  :color #000
+  .pagination 
+    :border-top 1px solid #ccc
+  a.standalone
+    :font-size 11px
+    :letter-spacing -0.5px
+    :display block
+    :margin 0 3px 3px 3px
+    &amp;.right
+      :text-align right
+.gz_button
+  :-webkit-border-radius $radius
+  :border-radius $radius
+  :border 1px solid black
+  :display inline-block
+  :*display inline
+  :padding 3px 6px 3px 5px
+  :margin 0 3px 3px 0
+  :background-color #d6d6d6
+  :border 1px solid #B6B6B6
+  :background-color #ffffff
+  +gradient(#fff, #e6e6e6)
+  &amp;:hover
+    +gradient(#eee, #ccc)
+    a
+      :color #000
+  a
+    &amp;.add
+      :background url(/assets/gridzilla/add_16px.png) no-repeat
+    &amp;.clock
+      :background url(/assets/gridzilla/clock_16px.png) no-repeat
+    &amp;.check
+      :background url(/assets/gridzilla/check_16px.png) no-repeat
+    &amp;.read
+      :background url(/assets/gridzilla/read_16px.png) no-repeat
+    &amp;.allread
+      :background url(/assets/gridzilla/allread_16px.png) no-repeat
+    &amp;.note
+      :background url(/assets/gridzilla/note_16px.png) no-repeat
+    &amp;.remove
+      :background url(/assets/gridzilla/delete_16px.png) no-repeat
+    &amp;.report
+      :background url(/assets/gridzilla/report_16px.png) no-repeat
+    &amp;.print
+      :background url(/assets/gridzilla/printer_16px.png) no-repeat
+    &amp;.send_message
+      :background url(/assets/gridzilla/message_16px.png) no-repeat
+    &amp;.tag
+      :background url(/assets/gridzilla/tag_16px.png) no-repeat
+    &amp;.dropclass
+      :background url(/assets/gridzilla/drop_class_16px.png) no-repeat
+    &amp;.edit
+      :background url(/assets/gridzilla/edit_16px.png) no-repeat
+    &amp;.excel
+      :background url(/assets/gridzilla/page_excel.png) no-repeat
+    &amp;.match
+      :background url(/assets/gridzilla/match_16px.png) no-repeat
+    &amp;.no_show
+      :background url(/assets/gridzilla/noshow_16px.png) no-repeat
+    &amp;.send_document
+      :background url(/assets/gridzilla/send_doc_16px.png) no-repeat
+    &amp;.move_up
+      :background url(/assets/gridzilla/arrow_up_16px.png) no-repeat
+    &amp;.clipboard
+      :background url(/assets/gridzilla/clipboard_16px.png) no-repeat
+    &amp;.copytime
+      :background url(/assets/gridzilla/copy_16px.png) no-repeat
+    &amp;.hourglass
+      :background url(/assets/gridzilla/hourglass_16px.png) no-repeat
+    &amp;.firstavailable
+      :background url(/assets/gridzilla/first_available_16px.png) no-repeat
+    &amp;.allclassattendance
+      :background url(/assets/gridzilla/allattendance_16px.png) no-repeat
+    &amp;.toggle
+      :background url(/assets/gridzilla/toggle_16px.png) no-repeat
+
+.gz_empty
+  :min-height 60px
+  :text-align center
+  :padding 25px 0 0 0
+  :background #DEDEDE
+  :color #717171
+  :font-size 15px
+  :letter-spacing -0.5px
+
+.gz_loading
+  :height 60px
+  :text-align center
+  :padding 25px 0 0 0
+  :background #DEDEDE
+  :color #717171
+  :font-size 15px
+  :letter-spacing -0.5px
+  :border 1px solid #B3B3B3
+
+.gz_load
+  h2
+    :font-size 12px
+    :letter-spacing -0.2px
+
+.gz_load_spacer
+  :margin 0px 0 0px 0
+  :height 60px
+
+.gz_accept
+  :text-align center
+  span
+    &amp;.link
+      :text-decoration underline
+      :cursor pointer
+    &amp;.select_all
+      :display none
+
+.gz_notice
+  :background #fffacd
+  :text-align center
+  :display none
+  span
+    &amp;.link
+      :text-decoration underline
+      :cursor pointer
+    &amp;.select_all
+      :display none
+
+.gz_error
+  :text-align center
+  span
+    &amp;.link
+      :text-decoration underline
+      :cursor pointer
+    &amp;.select_all
+      :display none</pre>
+
+<p>.gridzilla_legend</p>
+
+<pre>.legend
+  :float right
+  :width 100px
+  :font-weight 600px
+  :padding-top 5px
+.block
+  :padding 3px 3px
+  :float  left
+  :margin -5px 5px 0px 0px
+  :border 1px solid #CBCBCB
+  :color  #333</pre>
+
+<p>.gz_table_container</p>
+
+<pre>:margin 7px 0 0 0
+.gz_table th:first-child, td:first-child
+  :border-left 1px solid #CBCBCB</pre>
+
+<p>messages.gridzilla</p>
+
+<pre>table.gz_table
+  thead
+    th
+      :font-size 1em
+  tbody 
+    td
+      :font-size .9em
+tr.threaded
+  background-color: #eee
+  .subject
+    padding-left: 10px
+.sorting
+  tr.threaded
+    .subject
+      padding-left: 5px</pre>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

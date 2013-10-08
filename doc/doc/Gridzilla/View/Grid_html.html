@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Grid.html - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../../index.html">Home</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../../CHANGELOG_md.html">CHANGELOG</a>
+  
+    <li class="file"><a href="../../../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="../../../MIT-LICENSE.html">MIT-LICENSE</a>
+  
+    <li class="file"><a href="../../../README_md.html">README</a>
+  
+    <li class="file"><a href="../../../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../../../doc/ActionController_html.html">ActionController.html</a>
+  
+    <li class="file"><a href="../../../doc/ActionView_html.html">ActionView.html</a>
+  
+    <li class="file"><a href="../../../doc/BlankSlate_html.html">BlankSlate.html</a>
+  
+    <li class="file"><a href="../../../doc/CHANGELOG_md_html.html">CHANGELOG_md.html</a>
+  
+    <li class="file"><a href="../../../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../../../doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla_html.html">Gridzilla.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/Controller_html.html">Controller.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/Controller/ClassMethods_html.html">ClassMethods.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/Controller/GridBuilder_html.html">GridBuilder.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/Css_html.html">Css.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/Generators_html.html">Generators.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/Generators/InstallGenerator_html.html">InstallGenerator.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/Gobbler_html.html">Gobbler.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/Message_html.html">Message.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/PaginationLinkRenderer_html.html">PaginationLinkRenderer.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/View_html.html">View.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/View/AjaxGrid_html.html">AjaxGrid.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/View/Grid_html.html">Grid.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/View/InstanceMethods_html.html">InstanceMethods.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/View/Panel_html.html">Panel.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/View/Row_html.html">Row.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/ViewDsl_html.html">ViewDsl.html</a>
+  
+    <li class="file"><a href="../../../doc/Gridzilla/ViewDsl/Base_html.html">Base.html</a>
+  
+    <li class="file"><a href="../../../doc/GridzillaTest_html.html">GridzillaTest.html</a>
+  
+    <li class="file"><a href="../../../doc/Kernel_html.html">Kernel.html</a>
+  
+    <li class="file"><a href="../../../doc/MIT-LICENSE_html.html">MIT-LICENSE.html</a>
+  
+    <li class="file"><a href="../../../doc/Mime_html.html">Mime.html</a>
+  
+    <li class="file"><a href="../../../doc/Module_html.html">Module.html</a>
+  
+    <li class="file"><a href="../../../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../../../doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="../../../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../../../doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="../../../doc/Symbol_html.html">Symbol.html</a>
+  
+    <li class="file"><a href="../../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../../../doc/gridzilla_gemspec_html.html">gridzilla_gemspec.html</a>
+  
+    <li class="file"><a href="../../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../../../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../../../doc/lib/generators/gridzilla/javascripts/jquery_blockUI_js_html.html">jquery_blockUI_js.html</a>
+  
+    <li class="file"><a href="../../../doc/lib/generators/gridzilla/stylesheets/gridzilla_sass_html.html">gridzilla_sass.html</a>
+  
+    <li class="file"><a href="../../../doc/lib/tasks/install_rake_html.html">install_rake.html</a>
+  
+    <li class="file"><a href="../../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../../../gridzilla_gemspec.html">gridzilla.gemspec</a>
+  
+    <li class="file"><a href="../../../lib/generators/gridzilla/javascripts/jquery_blockUI_js.html">jquery.blockUI.js</a>
+  
+    <li class="file"><a href="../../../lib/generators/gridzilla/stylesheets/gridzilla_sass.html">gridzilla.sass</a>
+  
+    <li class="file"><a href="../../../lib/tasks/install_rake.html">install.rake</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../ActionController.html">ActionController</a>
+  
+    <li><a href="../../../ActionView.html">ActionView</a>
+  
+    <li><a href="../../../BlankSlate.html">BlankSlate</a>
+  
+    <li><a href="../../../BlankSlate.html">BlankSlate</a>
+  
+    <li><a href="../../../Gridzilla.html">Gridzilla</a>
+  
+    <li><a href="../../../Gridzilla/Controller.html">Gridzilla::Controller</a>
+  
+    <li><a href="../../../Gridzilla/Controller/ClassMethods.html">Gridzilla::Controller::ClassMethods</a>
+  
+    <li><a href="../../../Gridzilla/Controller/GridBuilder.html">Gridzilla::Controller::GridBuilder</a>
+  
+    <li><a href="../../../Gridzilla/Css.html">Gridzilla::Css</a>
+  
+    <li><a href="../../../Gridzilla/Generators.html">Gridzilla::Generators</a>
+  
+    <li><a href="../../../Gridzilla/Generators/InstallGenerator.html">Gridzilla::Generators::InstallGenerator</a>
+  
+    <li><a href="../../../Gridzilla/Gobbler.html">Gridzilla::Gobbler</a>
+  
+    <li><a href="../../../Gridzilla/Message.html">Gridzilla::Message</a>
+  
+    <li><a href="../../../Gridzilla/PaginationLinkRenderer.html">Gridzilla::PaginationLinkRenderer</a>
+  
+    <li><a href="../../../Gridzilla/View.html">Gridzilla::View</a>
+  
+    <li><a href="../../../Gridzilla/View/AjaxGrid.html">Gridzilla::View::AjaxGrid</a>
+  
+    <li><a href="../../../Gridzilla/View/Grid.html">Gridzilla::View::Grid</a>
+  
+    <li><a href="../../../Gridzilla/View/InstanceMethods.html">Gridzilla::View::InstanceMethods</a>
+  
+    <li><a href="../../../Gridzilla/View/Panel.html">Gridzilla::View::Panel</a>
+  
+    <li><a href="../../../Gridzilla/View/Row.html">Gridzilla::View::Row</a>
+  
+    <li><a href="../../../Gridzilla/ViewDsl.html">Gridzilla::ViewDsl</a>
+  
+    <li><a href="../../../Gridzilla/ViewDsl/Base.html">Gridzilla::ViewDsl::Base</a>
+  
+    <li><a href="../../../GridzillaTest.html">GridzillaTest</a>
+  
+    <li><a href="../../../Kernel.html">Kernel</a>
+  
+    <li><a href="../../../Mime.html">Mime</a>
+  
+    <li><a href="../../../Module.html">Module</a>
+  
+    <li><a href="../../../Object.html">Object</a>
+  
+    <li><a href="../../../String.html">String</a>
+  
+    <li><a href="../../../Symbol.html">Symbol</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt; &lt;head&gt; &lt;meta content=“text/html; charset=UTF-8”
+http-equiv=“Content-Type”&gt;</p>
+
+<p>&lt;title&gt;class <a
+href="../../../Gridzilla/View/Grid.html">Gridzilla::View::Grid</a> - RDoc
+Documentation&lt;/title&gt;</p>
+
+<p>&lt;link type=“text/css” media=“screen” href=“../../rdoc.css”
+rel=“stylesheet”&gt;</p>
+
+<p>&lt;script type=“text/javascript”&gt;</p>
+
+<pre>var rdoc_rel_prefix = &quot;../../&quot;;</pre>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;script type=“text/javascript” charset=“utf-8”
+src=“../../js/jquery.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../../js/navigation.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../../js/search_index.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../../js/search.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../../js/searcher.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../../js/darkfish.js”&gt;&lt;/script&gt;</p>
+
+<p>&lt;body id=“top” class=“class”&gt; &lt;nav id=“metadata”&gt;</p>
+
+<pre>&lt;nav id=&quot;home-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;
+  &lt;a href=&quot;../../index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;../../table_of_contents.html#classes&quot;&gt;Classes&lt;/a&gt;
+  &lt;a href=&quot;../../table_of_contents.html#methods&quot;&gt;Methods&lt;/a&gt;
+&lt;/h3&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;nav id=&quot;search-section&quot; class=&quot;section project-section&quot; class=&quot;initially-hidden&quot;&gt;
+&lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search&quot; id=&quot;search-field&quot;
+           title=&quot;Type to search, Up and Down to navigate, Enter to load&quot;&gt;
+  &lt;/h3&gt;
+&lt;/form&gt;
+
+&lt;ul id=&quot;search-results&quot; class=&quot;initially-hidden&quot;&gt;&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;div id=&quot;file-metadata&quot;&gt;
+  &lt;nav id=&quot;file-list-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Defined In&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;lib/gridzilla/dsl.rb
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;class-metadata&quot;&gt;
+
+  &lt;nav id=&quot;parent-class-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Parent&lt;/h3&gt;
+
+&lt;p class=&quot;link&quot;&gt;&lt;a href=&quot;../../Object.html&quot;&gt;Object&lt;/a&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;!-- Method Quickref --&gt;</pre>
+
+<p>&lt;nav id=“method-list-section” class=“section”&gt;</p>
+
+<pre>&lt;h3 class=&quot;section-header&quot;&gt;Methods&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-c-new&quot;&gt;::new&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-panel&quot;&gt;#panel&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-rows&quot;&gt;#rows&lt;/a&gt;
+
+  &lt;li &gt;&lt;a href=&quot;#method-i-title&quot;&gt;#title&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;project-metadata&quot;&gt;
+  &lt;nav id=&quot;fileindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Pages&lt;/h3&gt;
+
+&lt;ul&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../CHANGELOG_md.html&quot;&gt;CHANGELOG&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../Gemfile.html&quot;&gt;Gemfile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../Gemfile_lock.html&quot;&gt;Gemfile.lock&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../MIT-LICENSE.html&quot;&gt;MIT-LICENSE&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../README_md.html&quot;&gt;README&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../Rakefile.html&quot;&gt;Rakefile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../doc/created_rid.html&quot;&gt;created.rid&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../gridzilla_gemspec.html&quot;&gt;gridzilla.gemspec&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../lib/generators/gridzilla/javascripts/jquery_blockUI_js.html&quot;&gt;jquery.blockUI.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../lib/generators/gridzilla/stylesheets/gridzilla_sass.html&quot;&gt;gridzilla.sass&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../../lib/tasks/install_rake.html&quot;&gt;install.rake&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>  &lt;nav id=&quot;classindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Class and Module Index&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../ActionController.html&quot;&gt;ActionController&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../ActionView.html&quot;&gt;ActionView&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../BlankSlate.html&quot;&gt;BlankSlate&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../BlankSlate.html&quot;&gt;BlankSlate&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla.html&quot;&gt;Gridzilla&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/Controller.html&quot;&gt;Gridzilla::Controller&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/Controller/ClassMethods.html&quot;&gt;Gridzilla::Controller::ClassMethods&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/Controller/GridBuilder.html&quot;&gt;Gridzilla::Controller::GridBuilder&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/Css.html&quot;&gt;Gridzilla::Css&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/Generators.html&quot;&gt;Gridzilla::Generators&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/Generators/InstallGenerator.html&quot;&gt;Gridzilla::Generators::InstallGenerator&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/Gobbler.html&quot;&gt;Gridzilla::Gobbler&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/Message.html&quot;&gt;Gridzilla::Message&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/PaginationLinkRenderer.html&quot;&gt;Gridzilla::PaginationLinkRenderer&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/View.html&quot;&gt;Gridzilla::View&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/View/AjaxGrid.html&quot;&gt;Gridzilla::View::AjaxGrid&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/View/Grid.html&quot;&gt;Gridzilla::View::Grid&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/View/InstanceMethods.html&quot;&gt;Gridzilla::View::InstanceMethods&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/View/Panel.html&quot;&gt;Gridzilla::View::Panel&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/View/Row.html&quot;&gt;Gridzilla::View::Row&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/ViewDsl.html&quot;&gt;Gridzilla::ViewDsl&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gridzilla/ViewDsl/Base.html&quot;&gt;Gridzilla::ViewDsl::Base&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../GridzillaTest.html&quot;&gt;GridzillaTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Kernel.html&quot;&gt;Kernel&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Mime.html&quot;&gt;Mime&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Module.html&quot;&gt;Module&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Object.html&quot;&gt;Object&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../String.html&quot;&gt;String&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Symbol.html&quot;&gt;Symbol&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<p>&lt;div id=“documentation”&gt;</p>
+
+<pre class="ruby"><span class="ruby-operator">&lt;</span><span class="ruby-identifier">h1</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;class&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">class</span> <span class="ruby-constant">Gridzilla</span><span class="ruby-operator">::</span><span class="ruby-constant">View</span><span class="ruby-operator">::</span><span class="ruby-constant">Grid</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/h1&gt;
+
+&lt;div id=&quot;description&quot; class=&quot;description&quot;&gt;
+
+&lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-operator">!</span><span class="ruby-operator">-</span><span class="ruby-operator">-</span> <span class="ruby-identifier">description</span> <span class="ruby-operator">-</span><span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span>
+
+<span class="ruby-operator">&lt;</span><span class="ruby-identifier">section</span> <span class="ruby-identifier">id</span>=<span class="ruby-string">&quot;5Buntitled-5D&quot;</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;documentation-section&quot;</span><span class="ruby-operator">&gt;</span>
+
+  <span class="ruby-operator">&lt;</span><span class="ruby-operator">!</span><span class="ruby-operator">-</span><span class="ruby-operator">-</span> <span class="ruby-constant">Methods</span> <span class="ruby-operator">-</span><span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span>
+
+   <span class="ruby-operator">&lt;</span><span class="ruby-identifier">section</span> <span class="ruby-identifier">id</span>=<span class="ruby-string">&quot;public-class-5Buntitled-5D-method-details&quot;</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-section section&quot;</span><span class="ruby-operator">&gt;</span>
+    <span class="ruby-operator">&lt;</span><span class="ruby-identifier">h3</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;section-header&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Public</span> <span class="ruby-constant">Class</span> <span class="ruby-constant">Methods</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/h3&gt;
+
+    &lt;div id=&quot;method-c-new&quot; class=&quot;method-detail &quot;&gt;
+
+      &lt;div class=&quot;method-heading&quot;&gt;
+        &lt;span class=&quot;method-name&quot;&gt;new&lt;/</span><span class="ruby-identifier">pan</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">span</span>
+          <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-args&quot;</span><span class="ruby-operator">&gt;</span>(<span class="ruby-identifier">view</span>)<span class="ruby-operator">&lt;</span><span class="ruby-regexp">/span&gt;
+
+        &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/</span><span class="ruby-identifier">pan</span><span class="ruby-operator">&gt;</span>
+
+      <span class="ruby-operator">&lt;</span><span class="ruby-node">/div&gt;
+
+      &lt;div class=&quot;method-description&quot;&gt;
+
+        &lt;div class=&quot;method-source-code&quot; id=&quot;new-source&quot;&gt;
+          &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/</span><span class="ruby-identifier">gridzilla</span><span class="ruby-operator">/</span><span class="ruby-identifier">dsl</span>.<span class="ruby-identifier">rb</span>, <span class="ruby-identifier">line</span> <span class="ruby-value">479</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/span&gt;
+</span></pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;initialize&lt;/span&gt;(&lt;span
+class=“ruby-identifier”&gt;view&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;      = &lt;span class=&quot;ruby-identifier&quot;&gt;view&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt; = &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;instance_variable_get&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;'@gridzilla'&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>      &lt;/div&gt;&lt;!-- new-source --&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;&lt;!-- new-method --&gt;
+
+&lt;/section&gt;&lt;!-- public-class-method-details --&gt;
+
+ &lt;section id=&quot;public-instance-5Buntitled-5D-method-details&quot; class=&quot;method-section section&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;Public Instance Methods&lt;/h3&gt;
+
+  &lt;div id=&quot;method-i-panel&quot; class=&quot;method-detail &quot;&gt;
+
+    &lt;div class=&quot;method-heading&quot;&gt;
+      &lt;span class=&quot;method-name&quot;&gt;panel&lt;/span&gt;&lt;span
+        class=&quot;method-args&quot;&gt;(*args, &amp;block)&lt;/span&gt;
+
+      &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class=&quot;method-description&quot;&gt;
+
+      &lt;div class=&quot;method-source-code&quot; id=&quot;panel-source&quot;&gt;
+        &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/gridzilla/dsl.rb, line 501&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;panel&lt;/span&gt;(&lt;span
+class=“ruby-operator”&gt;*&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;args&lt;/span&gt;, &lt;span
+class=“ruby-operator”&gt;&amp;amp;&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;block&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;args&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;extract_options!&lt;/span&gt;
+
+&lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:class&lt;/span&gt;] = &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;#{Gridzilla::Css::Panel} #{options[:class]}&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;strip&lt;/span&gt;
+
+&lt;span class=&quot;ruby-identifier&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;ArgumentError&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Missing block in panel definition&amp;quot;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;block_given?&lt;/span&gt;
+
+&lt;span class=&quot;ruby-identifier&quot;&gt;view_dsl&lt;/span&gt; = &lt;span class=&quot;ruby-constant&quot;&gt;Gridzilla&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;ViewDsl&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;Base&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-constant&quot;&gt;Gridzilla&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;Panel&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;), &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;)
+
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;tag&lt;/span&gt;(&lt;span class=&quot;ruby-value&quot;&gt;:div&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;, &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;))
+&lt;span class=&quot;ruby-identifier&quot;&gt;view_dsl&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;instance_eval&lt;/span&gt;(&lt;span class=&quot;ruby-operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;block&lt;/span&gt;)
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;div class='clear'&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- panel-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- panel-method --&gt;
+
+&lt;div id=&quot;method-i-rows&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;rows&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;(*args, &amp;block)&lt;/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;rows-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/gridzilla/dsl.rb, line 515&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;rows&lt;/span&gt;(&lt;span
+class=“ruby-operator”&gt;*&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;args&lt;/span&gt;, &lt;span
+class=“ruby-operator”&gt;&amp;amp;&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;block&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;args&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;extract_options!&lt;/span&gt;
+
+&lt;span class=&quot;ruby-identifier&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;ArgumentError&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Missing block in rows definition&amp;quot;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;block_given?&lt;/span&gt;
+
+&lt;span class=&quot;ruby-identifier&quot;&gt;view_dsl&lt;/span&gt;                     = &lt;span class=&quot;ruby-constant&quot;&gt;Gridzilla&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;ViewDsl&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;Base&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-constant&quot;&gt;Gridzilla&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;Row&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;(&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;), &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;)
+&lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:row_number&lt;/span&gt;] = &lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:collection&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;respond_to?&lt;/span&gt;(&lt;span class=&quot;ruby-value&quot;&gt;:total_pages&lt;/span&gt;)
+                                 &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:collection&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;offset&lt;/span&gt;
+                               &lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;
+                                 &lt;span class=&quot;ruby-value&quot;&gt;0&lt;/span&gt;
+                               &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:multi_page_selector&lt;/span&gt;] &lt;span class=&quot;ruby-keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:collection&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;total_entries&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:collection&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;length&lt;/span&gt;
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;&amp;lt;div class='#{Gridzilla::Css::Notice}' id='#{@gridzilla.last[:grid_name]}_multi_select'&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;&amp;lt;span class='#{@gridzilla.last[:grid_name]}_multi_select'&amp;gt;#{@gridzilla.last[:collection].length} items on this page are selected. &amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;&amp;lt;span onclick='gridzilla.activate_multi_page_select(\&amp;quot;#{@gridzilla.last[:grid_name]}\&amp;quot;)'&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot; class='link'&amp;gt;Select all #{@gridzilla.last[:collection].total_entries} items.&amp;lt;/span&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;/span&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;&amp;lt;span class='#{@gridzilla.last[:grid_name]}_multi_select select_all'&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;All #{@gridzilla.last[:collection].total_entries} items are selected. &amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;span class='link gz_multi_clear'&amp;gt;Clear Selection.&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;&amp;lt;div class='#{Gridzilla::Css::TableContainer}'&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;&amp;lt;table class='#{Gridzilla::Css::Table}'&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;thead&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;tr&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:row_data&lt;/span&gt;] = &lt;span class=&quot;ruby-keyword&quot;&gt;nil&lt;/span&gt;
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;block&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;arity&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;view_dsl&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;instance_exec&lt;/span&gt;(&lt;span class=&quot;ruby-constant&quot;&gt;Gridzilla&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;Gobbler&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;, &lt;span class=&quot;ruby-operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;block&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;view_dsl&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;instance_exec&lt;/span&gt;(&lt;span class=&quot;ruby-constant&quot;&gt;Gridzilla&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;Gobbler&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;new&lt;/span&gt;, &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:collection&lt;/span&gt;], &lt;span class=&quot;ruby-operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;block&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;/tr&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;/thead&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;tbody&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+
+&lt;span class=&quot;ruby-identifier&quot;&gt;row_css_class_option&lt;/span&gt;  = &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:class&lt;/span&gt;]
+&lt;span class=&quot;ruby-identifier&quot;&gt;row_css_id_option&lt;/span&gt;     = &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:id&lt;/span&gt;]
+
+&lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:onmouseover&lt;/span&gt;] = &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;gridzilla.add_class(this, 'over');#{options[:onmouseover]}&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:onmouseout&lt;/span&gt;]  = &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;gridzilla.remove_class(this, 'over');#{options[:onmouseout]}&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:onclick&lt;/span&gt;]     = &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;gridzilla.row_click(this);#{options[:onclick]}&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:collection&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;row_css_class&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;row_css_class_option&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;is_a?&lt;/span&gt;(&lt;span class=&quot;ruby-constant&quot;&gt;Proc&lt;/span&gt;) &lt;span class=&quot;ruby-operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;row_css_class_option&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;call&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;item&lt;/span&gt;) &lt;span class=&quot;ruby-operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;row_css_class_option&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;row_css_id&lt;/span&gt;    = &lt;span class=&quot;ruby-identifier&quot;&gt;row_css_id_option&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;is_a?&lt;/span&gt;(&lt;span class=&quot;ruby-constant&quot;&gt;Proc&lt;/span&gt;) &lt;span class=&quot;ruby-operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;row_css_id_option&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;call&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;item&lt;/span&gt;) &lt;span class=&quot;ruby-operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;row_css_id_option&lt;/span&gt;
+
+  &lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:selected_items&lt;/span&gt;] &lt;span class=&quot;ruby-keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:selected_items&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;include?&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;item&lt;/span&gt;)
+    &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:class&lt;/span&gt;] = &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;#{row_css_class} ui-selected&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:class&lt;/span&gt;] = &lt;span class=&quot;ruby-identifier&quot;&gt;row_css_class&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:id&lt;/span&gt;]    = &lt;span class=&quot;ruby-identifier&quot;&gt;row_css_id&lt;/span&gt;
+  &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:class&lt;/span&gt;] = &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:class&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;to_s&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;cycle&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot; alt&amp;quot;&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;)
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;tag&lt;/span&gt;(&lt;span class=&quot;ruby-value&quot;&gt;:tr&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;, &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;).&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:row_data&lt;/span&gt;] = &lt;span class=&quot;ruby-identifier&quot;&gt;item&lt;/span&gt;
+  &lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;block&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;arity&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;ruby-identifier&quot;&gt;view_dsl&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;instance_exec&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;item&lt;/span&gt;, &lt;span class=&quot;ruby-operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;block&lt;/span&gt;)
+  &lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;ruby-identifier&quot;&gt;view_dsl&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;instance_exec&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;item&lt;/span&gt;, &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:collection&lt;/span&gt;], &lt;span class=&quot;ruby-operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;block&lt;/span&gt;)
+  &lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;/tr&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;/tbody&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;/table&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;/div&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:collection&lt;/span&gt;].&lt;span class=&quot;ruby-identifier&quot;&gt;empty?&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:empty_block&lt;/span&gt;]
+  &lt;span class=&quot;ruby-identifier&quot;&gt;empty_options&lt;/span&gt;         = &lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:empty_block_options&lt;/span&gt;] &lt;span class=&quot;ruby-operator&quot;&gt;||&lt;/span&gt; {}
+  &lt;span class=&quot;ruby-identifier&quot;&gt;empty_options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:class&lt;/span&gt;] = &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;#{Gridzilla::Css::Empty} #{empty_options[:class]}&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;strip&lt;/span&gt;
+
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;tag&lt;/span&gt;(&lt;span class=&quot;ruby-value&quot;&gt;:div&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;empty_options&lt;/span&gt;, &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;))
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;instance_eval&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ruby-ivar&quot;&gt;@gridzilla&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;last&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:empty_block&lt;/span&gt;]
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;/div&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre class="ruby">    <span class="ruby-operator">&lt;</span><span class="ruby-regexp">/div&gt;&lt;!-- rows-source --&gt;
+
+  &lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span>
+
+<span class="ruby-operator">&lt;</span><span class="ruby-regexp">/div&gt;&lt;!-- rows-method --&gt;
+
+&lt;div id=&quot;method-i-title&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;title&lt;/</span><span class="ruby-identifier">pan</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">span</span>
+      <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-args&quot;</span><span class="ruby-operator">&gt;</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) { <span class="ruby-operator">||</span> <span class="ruby-operator">...</span> }<span class="ruby-operator">&lt;</span><span class="ruby-regexp">/span&gt;
+
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/</span><span class="ruby-identifier">pan</span><span class="ruby-operator">&gt;</span>
+
+  <span class="ruby-operator">&lt;</span><span class="ruby-node">/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;title-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File lib/</span><span class="ruby-identifier">gridzilla</span><span class="ruby-operator">/</span><span class="ruby-identifier">dsl</span>.<span class="ruby-identifier">rb</span>, <span class="ruby-identifier">line</span> <span class="ruby-value">484</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/span&gt;
+</span></pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;title&lt;/span&gt;(&lt;span
+class=“ruby-operator”&gt;*&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;args&lt;/span&gt;, &lt;span
+class=“ruby-operator”&gt;&amp;amp;&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;block&lt;/span&gt;)</p>
+
+<pre>&lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt; = &lt;span class=&quot;ruby-identifier&quot;&gt;args&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;extract_options!&lt;/span&gt;
+&lt;span class=&quot;ruby-identifier&quot;&gt;text&lt;/span&gt;    = &lt;span class=&quot;ruby-identifier&quot;&gt;args&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;shift&lt;/span&gt;
+
+&lt;span class=&quot;ruby-identifier&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;ArgumentError&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Missing block or text in title definition&amp;quot;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;block_given?&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;text&lt;/span&gt;
+
+&lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;[&lt;span class=&quot;ruby-value&quot;&gt;:class&lt;/span&gt;] = &lt;span class=&quot;ruby-node&quot;&gt;&amp;quot;#{Gridzilla::Css::Title} #{options[:class]}&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;strip&lt;/span&gt;
+
+&lt;span class=&quot;ruby-keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;block_given?&lt;/span&gt;
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;tag&lt;/span&gt;(&lt;span class=&quot;ruby-value&quot;&gt;:div&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;, &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;))
+  &lt;span class=&quot;ruby-keyword&quot;&gt;yield&lt;/span&gt;
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;&amp;lt;/div&amp;gt;&amp;quot;&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;html_safe&lt;/span&gt;)
+&lt;span class=&quot;ruby-keyword&quot;&gt;else&lt;/span&gt;
+  &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;concat&lt;/span&gt;(&lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;content_tag&lt;/span&gt;(&lt;span class=&quot;ruby-value&quot;&gt;:div&lt;/span&gt;, &lt;span class=&quot;ruby-ivar&quot;&gt;@view&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;content_tag&lt;/span&gt;(&lt;span class=&quot;ruby-value&quot;&gt;:h4&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;text&lt;/span&gt;), &lt;span class=&quot;ruby-identifier&quot;&gt;options&lt;/span&gt;))
+&lt;span class=&quot;ruby-keyword&quot;&gt;end&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>        &lt;/div&gt;&lt;!-- title-source --&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;&lt;!-- title-method --&gt;
+
+  &lt;/section&gt;&lt;!-- public-instance-method-details --&gt;
+
+&lt;/section&gt;&lt;!-- 5Buntitled-5D --&gt;</pre>
+
+<p>&lt;/div&gt;&lt;!– documentation –&gt;</p>
+
+<p>&lt;footer id=“validator-badges”&gt;</p>
+
+<pre>&lt;p&gt;&lt;a href=&quot;http://validator.w3.org/check/referer&quot;&gt;[Validate]&lt;/a&gt;
+&lt;p&gt;Generated by &lt;a href=&quot;https://github.com/rdoc/rdoc&quot;&gt;RDoc&lt;/a&gt; 4.0.1.
+&lt;p&gt;Generated with the &lt;a href=&quot;http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish Rdoc Generator&lt;/a&gt; 3.</pre>
+
+<p>&lt;/footer&gt;</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
