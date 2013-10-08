@@ -39,6 +39,35 @@ module Gridzilla
   module View
     module InstanceMethods
 
+      # Top level DSL method that places the grid in a page.  If the grid has a
+      # block then it is a static grid.  Otherwise, it is the place holder for
+      # an ajax grid.
+      #
+      # Common Options:
+      # * class - css class applied to the grid container.
+      # * data - hash that will be used as context within the grid.
+      # * height - set the height of the grid.
+      #
+      # === Ajax
+      #
+      # grid(name, options)
+      #
+      # name is the html id of the top level grid container.
+      #
+      # Options:
+      # * lazy - determines whether or not the grid loads automatically.
+      # * url - url to make ajax requests to when paginating the grid.  TODO: Seems like there should be a better way to do this.  This is associated with the .grid template type.
+      #
+      # === Static
+      #
+      # grid (name, collection, options, &block)
+      #
+      # name is the html id of the top level grid container.
+      # collection is the list of items to be displayed in the grid. TODO: The collection parameter needs to be added.
+      #
+      # Options:
+      # * selected_items - items in the grid that should be selected when the grid is rendered.
+
       def grid(name, *args, &block)
         options    = args.extract_options!
         collection = args.shift

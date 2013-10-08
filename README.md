@@ -29,19 +29,6 @@ gridzilla(&block)
 Ruby View DSL
 =======
 
-grid(name, collection, \*args, &block)
--------
-Top level DSL method that places the grid in a page.  If the grid has a block then it is a static grid.  Otherwise, it is the place holder for an ajax grid.
-
-* __name__ is the html id of the top level grid container.
-* __collection__ is the list of items to be displayed in the grid. TODO: The collection parameter needs to be added.
-* \*args is used to provide options via hashes.
-  * class - css class applied to the grid container.
-  * data - hash that will be used as context within the grid.
-  * height - set the height of the grid.
-  * url - url to make ajax requests to when paginating the grid.  TODO: Seems like there should be a better way to do this.  This is associated with the .grid template type.
-  * selected\_items - items in the grid that should be selected when the grid is rendered.
-
 ajax\_grid(collection, \*args, &block)
 -------
 
