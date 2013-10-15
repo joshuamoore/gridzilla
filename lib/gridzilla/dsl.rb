@@ -443,6 +443,25 @@ module Gridzilla
         end
       end
 
+      # Top level DSL method that renders a grid inside a place holder created
+      # by the grid DSL method.
+      #
+      # * collection - the collection of items to be rendered as rows in the
+      #   grid.
+      # * args - options passed to the grid.
+      # * block - A required block that defines the rendering of the grid.
+      #
+      # === Options
+      # * grid_name - the html id of the top level grid container which is also
+      #   used to reference the grid in JavaScript.
+      # * selected_items - the items being displayed in the grid that are
+      #   already selected so they can be rendered as selected.
+      # * multi_page_selector - specifies whether or not the multipage selection
+      #   functionality is turned on.  Multipage selection allows the user to
+      #   specify that an action should be taken on all the items in the grid
+      #   rather than just those specified on the current page.  The application
+      #   must implement what items are actually affected by the action.
+
       def ajax_grid(collection, *args, &block)
         options = args.extract_options!
 
