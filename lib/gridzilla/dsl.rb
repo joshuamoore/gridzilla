@@ -531,6 +531,31 @@ module Gridzilla
         @view.concat("<div class='clear'></div></div>".html_safe)
       end
 
+      # Iterates through the items to be displayed in the grid and renders each
+      # row based on the column definitions.
+      #
+      # * args -
+      # * block - a required block that defines the columns for the grid.
+      #
+      # === Options
+      # These options also get passed down to the rails tag view helper method to
+      # create the <tr> tags
+      # * class - css class to be applied to the rows.  This can be a string or a
+      # Proc.  If a Proc is provided then it will be called on each row with the
+      # item for the row passed into it as a parameter. The Proc should return
+      # a valid html class string.
+      # * id - css id to be applied to the rows.  This can be a string (which
+      # seems inappropriate since ids should be unique) or a Proc.  If a Proc is
+      # provided then it will be called on each row with the item for the row
+      # passed in as a parameter.  The Proc should return a valid html id string.
+      # * onmouseover - mouse over event handler for each row of the grid.
+      # * onmouseout - mouse out event handler for each row of the grid.
+      # * onclick - click event handler for each row of the grid.
+      #
+      # === Examples
+      #     rows :class => Proc.new{|i| "example-id-#{i.id}"} do |item|
+      #
+      #     rows :class => "example-row" do |item|
       def rows(*args, &block)
         options = args.extract_options!
 
@@ -576,6 +601,9 @@ module Gridzilla
         options[:onclick]     = "gridzilla.row_click(this);#{options[:onclick]}"
         @gridzilla.last[:collection].each do |item|
           row_css_class = row_css_class_option.is_a?(Proc) ? row_css_class_option.call(item) : row_css_class_option
+          # TODO: This seems as if it should not work correctly since html
+          # element ids are supposed to be unique.  Therefore the non-Proc
+          # version should be removed.
           row_css_id    = row_css_id_option.is_a?(Proc) ? row_css_id_option.call(item) : row_css_id_option
 
           if @gridzilla.last[:selected_items] and @gridzilla.last[:selected_items].include?(item)
