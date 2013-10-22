@@ -29,9 +29,6 @@ gridzilla(&block)
 Ruby View DSL
 =======
 
-ajax\_grid(collection, \*args, &block)
--------
-
 rows(\*args, &block)
 -------
 
