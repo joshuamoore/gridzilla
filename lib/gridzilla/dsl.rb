@@ -657,7 +657,7 @@ module Gridzilla
         @gridzilla = @view.instance_variable_get('@gridzilla')
       end
 
-      def action_function(name, function_name, *args, &block)
+      def action_function(name, function_name, *args)
         options = args.extract_options!
 
         options[:class] = "#{Gridzilla::Css::PanelAction} #{options[:class]}".strip
