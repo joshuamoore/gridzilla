@@ -29,9 +29,6 @@ gridzilla(&block)
 Ruby View DSL
 =======
 
-title(\*args, &block)
--------
-
 panel(\*args, &block)
 -------
 

@@ -500,6 +500,13 @@ module Gridzilla
         @gridzilla = @view.instance_variable_get('@gridzilla')
       end
 
+      # DSL method that renders a title bar for the grid. Either a text parameter
+      # or a block is required to provide the content for the title.
+      #
+      # * text - if a text parameter is passed then it will be used for the title.
+      # * args - html div options passed to the title that will be applied to the
+      #   containing div.
+      # * block - if a block is given then it is used for the content of the title.
       def title(*args, &block)
         options = args.extract_options!
         text    = args.shift
