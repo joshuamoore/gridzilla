@@ -524,6 +524,11 @@ module Gridzilla
         end
       end
 
+      # DSL method that renders a panel above or below the grid that can contain
+      # information related to the grid or actions to be performed on the grid.
+      #
+      # * args - html div options for the panel container div.
+      # * block - Required block to provide the content for the panel.
       def panel(*args, &block)
         options = args.extract_options!
 
