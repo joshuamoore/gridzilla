@@ -696,6 +696,11 @@ module Gridzilla
         @view.link_to_function name, "gridzilla.action_function(#{function_name.to_json}, #{@gridzilla.last[:grid_name].to_json}, #{attribute_name.to_json}, #{json_options.to_json})", options
       end
 
+      # DSL method that renders pagination links if there is more than one page
+      # of items to be displayed in the grid.
+      #
+      # * args - options that will be passed to the pagination gem. Currently
+      #   will_paginate is being used.
       def pagination_links(*args)
         options = args.extract_options!
 
