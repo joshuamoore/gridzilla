@@ -739,9 +739,43 @@ module Gridzilla
           @view.concat(@view.tag(:th))
           @gridzilla.last[:single_select] = true
         elsif attribute.is_a?(Symbol)
-          @view.concat(@view.content_tag(:td, @view.tag(:input, :type => "hidden", :name => "#{@gridzilla.last[:grid_name]}_select", :value => @gridzilla.last[:row_data].send(attribute).to_json, :id => nil)+@view.tag(:div, :class => Gridzilla::Css::RadioButton), options,false))
+          @view.concat(
+            @view.content_tag(
+              :td,
+              @view.tag(
+                :input,
+                :type => "hidden",
+                :name => "#{@gridzilla.last[:grid_name]}_select",
+                :value => @gridzilla.last[:row_data].send(attribute).to_json,
+                :id => nil
+              ) +
+              @view.tag(
+                :div,
+                :class => Gridzilla::Css::RadioButton
+              ),
+              options,
+              false
+            )
+          )
         else
-          @view.concat(@view.content_tag(:td, @view.tag(:input, :type => "hidden", :name => "#{@gridzilla.last[:grid_name]}_select", :value => attribute.to_json, :id => nil)+@view.tag(:div, :class => Gridzilla::Css::RadioButton), options,false))
+          @view.concat(
+            @view.content_tag(
+              :td,
+              @view.tag(
+                :input,
+                :type => "hidden",
+                :name => "#{@gridzilla.last[:grid_name]}_select",
+                :value => attribute.to_json,
+                :id => nil
+              ) +
+              @view.tag(
+                :div,
+                :class => Gridzilla::Css::RadioButton
+              ),
+              options,
+              false
+            )
+          )
         end
       end
 
@@ -750,11 +784,55 @@ module Gridzilla
         options.merge!({:style => 'width: 12px;'})
 
         if @gridzilla.last[:row_data].nil?
-          @view.concat(@view.content_tag(:th, @view.content_tag(:div, '', :class => Gridzilla::Css::Checkbox, :id => "#{@gridzilla.last[:grid_name]}_select_all")))
+          @view.concat(
+            @view.content_tag(
+              :th,
+              @view.content_tag(
+                :div,
+                '',
+                :class => Gridzilla::Css::Checkbox,
+                :id => "#{@gridzilla.last[:grid_name]}_select_all"
+              )
+            )
+          )
         elsif attribute.is_a?(Symbol)
-          @view.concat(@view.content_tag(:td, @view.tag(:input, :type => "hidden", :name => "#{@gridzilla.last[:grid_name]}_select", :value => @gridzilla.last[:row_data].send(attribute).to_json, :id => nil)+@view.content_tag(:div, '', :class => Gridzilla::Css::Checkbox), options))
+          @view.concat(
+            @view.content_tag(
+              :td,
+              @view.tag(
+                :input,
+                :type => "hidden",
+                :name => "#{@gridzilla.last[:grid_name]}_select",
+                :value => @gridzilla.last[:row_data].send(attribute).to_json,
+                :id => nil
+              ) +
+              @view.content_tag(
+                :div,
+                '',
+                :class => Gridzilla::Css::Checkbox
+              ),
+              options
+            )
+          )
         else
-          @view.concat(@view.content_tag(:td, @view.tag(:input, :type => "hidden", :name => "#{@gridzilla.last[:grid_name]}_select", :value => attribute.to_json, :id => nil)+@view.content_tag(:div, '', :class => Gridzilla::Css::Checkbox), options))
+          @view.concat(
+            @view.content_tag(
+              :td,
+              @view.tag(
+                :input,
+                :type => "hidden",
+                :name => "#{@gridzilla.last[:grid_name]}_select",
+                :value => attribute.to_json,
+                :id => nil
+              ) +
+              @view.content_tag(
+                :div,
+                '',
+                :class => Gridzilla::Css::Checkbox
+              ),
+              options
+            )
+          )
         end
       end
 
