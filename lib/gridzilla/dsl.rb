@@ -716,6 +716,12 @@ module Gridzilla
         @gridzilla = @view.instance_variable_get('@gridzilla')
       end
 
+      # DSL method that displays a message where the grid rows would be if a grid
+      # collection does not contain any items.
+      #
+      # * args - html options that will be applied to the empty message container.
+      # * block - a block that renders the content to be displayed when the grid
+      #   collection does not contin any items.
       def if_empty(*args, &block)
         options = args.extract_options!
 
