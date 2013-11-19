@@ -657,6 +657,28 @@ module Gridzilla
         @gridzilla = @view.instance_variable_get('@gridzilla')
       end
 
+      # DSL method that renders a link that will perform an action on the items
+      # currently selected in the grid.  The action will be a javascript function.
+      # This method can only be used inside a Gridzilla::View::Grid#panel.
+      #
+      # * name - the text to be displayed in the link.
+      # * function_name - javascript function name that will be called when the
+      #   link is clicked.
+      # * args - options that control how the action_function operates as well as
+      #   html options that will be applied to the anchor tag.
+      #
+      # === Options
+      # * empty_message - message to display when no items have been selected
+      #   from the grid.
+      # * single_message - message to display when exactly one item must be
+      #   selected from the grid.
+      # * selection_constraint - specifies how many items must be selected from
+      #   the grid.  The options are single, multiple or a two element arrary that
+      #   specifies the range of valid selections.  [3, 6] requires the number
+      #   of selections to be 3 >= n <= 6.  Single is equivalent to [1, 1].  Multiple
+      #   is equivalent to [1, Infinity]. The default constraint is multiple.
+      # * block_message - message to display when the grid is blocked while an ajax
+      #   refresh of the grid is happening.
       def action_function(name, function_name, *args)
         options = args.extract_options!
 

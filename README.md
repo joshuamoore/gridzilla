@@ -29,9 +29,6 @@ gridzilla(&block)
 Ruby View DSL
 =======
 
-action\_function(name, function\_name, \*args, &block)
--------
-
 pagination\_links(\*args)
 -------
 
