@@ -861,7 +861,11 @@ module Gridzilla
         end
       end
 
-      def row_number_column(*args, &block)
+      # DSL method that renders a row number on each row of the grid.
+      #
+      # * args - html options to be applied to the th and td elements rendered
+      #   for the row number column.
+      def row_number_column(*args)
         options = args.extract_options!
 
         if @gridzilla.last[:row_data].nil?
