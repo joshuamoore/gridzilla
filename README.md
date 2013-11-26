@@ -26,13 +26,6 @@ Ruby Controller DSL
 gridzilla(&block)
 -------
 
-Ruby View DSL
-=======
-
-column(name = "", \*args, &block)
--------
-
-
 Examples
 =======
 

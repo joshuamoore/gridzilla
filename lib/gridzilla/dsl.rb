@@ -877,6 +877,16 @@ module Gridzilla
         end
       end
 
+      # DSL method that renders each column of the grid including the header.
+      #
+      # * name - The name of the column that will be display in the header for
+      #   the user to see.
+      # * attribute - optional parameter that specifies an attribute or method
+      #   on each row data object to use as the display text in the grid column.
+      # * args - html options to be applied to the th and td elements rendered
+      #   for each column of the grid.
+      # * block - optional block that will render the content for the column on
+      #   on each row of the grid.
       def column(name = "", *args, &block)
         options   = args.extract_options!
         attribute = args.shift
