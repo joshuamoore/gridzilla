@@ -29,9 +29,6 @@ gridzilla(&block)
 Ruby View DSL
 =======
 
-single\_select\_column(attribute, \*args, &block)
--------
-
 select\_column(attribute, \*args, &block)
 -------
 

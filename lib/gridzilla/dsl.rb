@@ -731,7 +731,18 @@ module Gridzilla
         end
       end
 
-      def single_select_column(attribute, *args, &block)
+      # DSL method that renders an radio button selection on each row of the
+      # grid so that only one row of the grid can be selected at a time.
+      #
+      # * attribute - specifies the value associated with a column when it is
+      #   selected.  If the value is a Symbol then it represents an attribute
+      #   or method from the related object in the row data. Otherwise, the
+      #   value passed is the value associated with the row. Whatever the value
+      #   is it will be rendered on the client side grid as the corresponding
+      #   JSON javascript value.
+      # * args - html options to be applied to the td element containing the
+      #   radio button.
+      def single_select_column(attribute, *args)
         options = args.extract_options!
         options.merge!({:style => 'width: 12px;'})
 
