@@ -5,6 +5,22 @@ module Gridzilla
     end
 
     module ClassMethods
+      # Controller method that is used to implement actions that respond to AJAX
+      # grid requests.
+      #
+      # === Example
+      #
+      # Assuming a gridzilla grid named bar is making an AJAX request.
+      #
+      #   FooController < ApplicationController
+      #
+      #     gridzilla do
+      #       bar do
+      #         @foos = Foo.all
+      #       end
+      #     end
+      #
+      # <b>DEPRECATED:</b> Please use <tt>.grid template types</tt> instead.
       def gridzilla(&block)
         grid_builder = GridBuilder.new(self)
         block.bind(grid_builder).call

@@ -20,12 +20,6 @@ Last, add this line above the initialize! call to your config/environment.rb fil
 
 require 'will\_paginate'
 
-Ruby Controller DSL
-=======
-
-gridzilla(&block)
--------
-
 Examples
 =======
 
