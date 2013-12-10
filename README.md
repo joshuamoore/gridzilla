@@ -47,12 +47,12 @@ The Gridzilla API is namespaced under gridzilla.
 
 get\_data(grid\_name)
 -------
-Get the data hash associated with the grid_name. This data is used to provide 
+Get the data hash associated with the grid\_name. This data is used to provide 
 context to the grid, especially for ajax grids when making subsequent requests.
 
 set\_data(grid\_name, data)
 -------
-Set the data hash associated with the grid_name. This data is used to provide 
+Set the data hash associated with the grid\_name. This data is used to provide 
 context to the grid, especially for ajax grids when making subsequent requests.
 
 is\_loaded(grid\_name)
