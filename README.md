@@ -38,7 +38,7 @@ Examples
       - panel do
         != pagination_links
 
-Check out the example app at https://github.com/joshuamoore/gridzilla\_app to
+Check out the example app at [https://github.com/joshuamoore/gridzilla\_app](https://github.com/joshuamoore/gridzilla_app) to
 find usage examples.
 
 Javascript API
