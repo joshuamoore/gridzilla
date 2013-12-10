@@ -57,12 +57,7 @@ context to the grid, especially for ajax grids when making subsequent requests.
 
 is\_loaded(grid\_name)
 -------
-
-set\_loaded(grid\_name)
--------
-
-set\_unloaded(grid\_name)
--------
+Indicates whether or not an AJAX grid is currently loaded.
 
 get\_option(grid\_name, option\_name)
 -------
