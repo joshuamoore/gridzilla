@@ -61,9 +61,26 @@ Indicates whether or not an AJAX grid is currently loaded.
 
 get\_option(grid\_name, option\_name)
 -------
+Get options associated with the grid.
+* grid\_name - the name of the grid to get options for.
+* option\_name - the name of the option to retrieve a value for.
+
+== Gridzilla Options
+* controller - the name of the controller associated with the grid.
+* params - querystring parameters associated with the grid requests.
+* single\_select - indicates whether or not the grid is restricted to single selection.
+* multi\_page\_selected - indicates whether or not the user has performed a multi-page selection.
+* height - the specified height of the grid in pixels.
+* url - the url that requests are made for updates to the grid.
 
 set\_option(grid\_name, option\_name, value)
 -------
+Set options associated with the grid.
+* grid\_name - the name of the grid to set options for.
+* option\_name - the name of the option to set a value for.
+* value - the value to set the option to.
+
+See get\_option for a list of Gridzilla specific otions.
 
 setup(grid\_name)
 -------
