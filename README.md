@@ -65,7 +65,7 @@ Get options associated with the grid.
 * grid\_name - the name of the grid to get options for.
 * option\_name - the name of the option to retrieve a value for.
 
-== Gridzilla Options
+Gridzilla Options
 * controller - the name of the controller associated with the grid.
 * params - querystring parameters associated with the grid requests.
 * single\_select - indicates whether or not the grid is restricted to single selection.
