@@ -24,6 +24,13 @@ module Gridzilla
       def gridzilla(&block)
         grid_builder = GridBuilder.new(self)
         block.bind(grid_builder).call
+
+        if self.respond_to?(:instance_exec)
+          grid_builder.instance_exec(&block)
+        else
+          # deprecated in Rails 4.x
+          block.bind(grid_builder).call
+        end
       end
     end
 
@@ -38,7 +45,14 @@ module Gridzilla
         raise "No block given" unless block
 
         create_action("#{name}_grid") do
-          block.bind(self).call
+
+          if self.respond_to?(:instance_exec)
+            self.instance_exec(&block)
+          else
+            # deprecated in Rails 4.x
+            block.bind(self).call
+          end
+
           unless performed?
             render :layout => false
           end
@@ -709,7 +723,7 @@ module Gridzilla
 
         attribute_name = args.first
 
-        @view.link_to_function name, "gridzilla.action_function(#{function_name.to_json}, #{@gridzilla.last[:grid_name].to_json}, #{attribute_name.to_json}, #{json_options.to_json})", options
+        @view.link_to name, "#", options.merge!(onclick: "gridzilla.action_function(#{function_name.to_json}, #{@gridzilla.last[:grid_name].to_json}, #{attribute_name.to_json}, #{json_options.to_json})")
       end
 
       # DSL method that renders pagination links if there is more than one page
